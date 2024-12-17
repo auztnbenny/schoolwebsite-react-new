@@ -1,0 +1,35 @@
+/* src/styles/Enroll.css */
+
+.choice-wrap.enroll-wrap {
+    padding: 60px 0;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .choice-wrap.enroll-wrap .title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .phonewrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .phonewrp img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .phonewrp a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .phonewrp a:hover {
+    color: #d1e7fd;
+  }

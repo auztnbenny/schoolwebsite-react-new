@@ -1,0 +1,22 @@
+/* Testimonials.css - Testimonial Styles */
+.testimonials-wrap {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.testimonials_sec {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  position: relative;
+  margin-top: 40px;
+}
+
+.clientImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: -70px auto 20px;
+}

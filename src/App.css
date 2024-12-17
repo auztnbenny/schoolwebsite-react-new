@@ -1,0 +1,10 @@
+/* src/App.css */
+@import './css/bootstrap.min.css';
+@import './css/all.css';
+@import './css/owl.carousel.css';
+@import './css/animate.css';
+@import './css/style.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Add any additional global styles here */

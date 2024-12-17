@@ -1,0 +1,29 @@
+/* Footer.css - Footer Styles */
+.footer-wrap {
+  background: #222;
+  color: #fff;
+  padding: 80px 0 0;
+}
+
+.footer_logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.hourswrp {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom {
+  background: #1a1a1a;
+  padding: 20px 0;
+  margin-top: 60px;
+  text-align: center;
+}

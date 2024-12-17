@@ -1,0 +1,22 @@
+/* Categories.css - Course Categories Styles */
+.our-course-categories-two {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.categories-course {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.categories-course:hover {
+  transform: translateY(-10px);
+}
+
+.cours-icon img {
+  width: 60px;
+  height: 60px;
+}

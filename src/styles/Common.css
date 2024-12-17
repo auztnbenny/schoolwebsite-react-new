@@ -1,0 +1,23 @@
+/* Common.css - Shared Styles */
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .btn-primary {
+    background: #ffb607;
+    border-color: #ffb607;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .section-padding {
+    padding: 80px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .section-padding {
+      padding: 50px 0;
+    }
+  }

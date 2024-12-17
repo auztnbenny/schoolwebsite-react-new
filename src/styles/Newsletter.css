@@ -1,0 +1,52 @@
+/* src/styles/Newsletter.css */
+
+.newsletter-wrap {
+    padding: 60px 0;
+    background-color: #f1f1f1;
+  }
+  
+  .newsletter-wrap .title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .news-info form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 300px;
+  }
+  
+  .input-group .form-control {
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+  }
+  
+  .signup {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup:hover {
+    background-color: #0056b3;
+  }

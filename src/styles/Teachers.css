@@ -1,0 +1,31 @@
+/* src/styles/Teachers.css */
+
+.class-wrap {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .class-wrap .title h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+  .class_box {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .class_box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .class_Img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
