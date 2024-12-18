@@ -1,39 +1,61 @@
-// src/components/Teachers.jsx
 import React from 'react';
 import '../styles/Teachers.css';
-import Sanjukta from '../assets/images/SANJUKTA2.jpg';
-import Sunita from '../assets/images/PSUNITAPAUL2.jpg';
-import Geeta from '../assets/images/GEETASETHI2.jpg';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function Teachers() {
+const TeachersSlider = () => {
   const teachers = [
-    { image: Sanjukta, name: 'Sanjukta' },
-    { image: Sunita, name: 'P Sunita Paul' },
-    { image: Geeta, name: 'Geeta Sethi' },
+    {
+      image: '/src/assets/images/SANJUKTA2.jpg'
+    },
+    {
+      image: '/src/assets/images/PSUNITAPAUL2.jpg'
+    },
+    // {
+    //   image: '/images/P SUNITA PAUL2.jpg'
+    // },
+    {
+      image: 'src/assets/images/GEETASETHI2.jpg'
+    }
   ];
 
+  const slideLeft = () => {
+    const slider = document.getElementById('teacherSlider');
+    slider.scrollLeft = slider.scrollLeft - 300;
+  };
+
+  const slideRight = () => {
+    const slider = document.getElementById('teacherSlider');
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
+
   return (
-    <div className="class-wrap">
+    <div className="teacher-wrap">
       <div className="container">
-        <div className="title">
+        <div className="title center_title">
           <h1>Our Teachers</h1>
         </div>
-        <Carousel showThumbs={false} infiniteLoop autoPlay>
-          {teachers.map((teacher, index) => (
-            <div className="item" key={index}>
-              <div className="class_box">
-                <div className="class_Img">
-                  <img src={teacher.image} alt={teacher.name} />
+
+        <div className="teacher-slider-container">
+          <button className="nav-btn prev" onClick={slideLeft}>
+            <i className="fas fa-chevron-left"></i>
+          </button>
+
+          <div className="teacher-slider" id="teacherSlider">
+            {teachers.map((teacher, index) => (
+              <div key={index} className="single-teachers">
+                <div className="teacherImg">
+                  <img src={teacher.image} alt={`Teacher ${index + 1}`} />
                 </div>
               </div>
-            </div>
-          ))}
-        </Carousel>
+            ))}
+          </div>
+
+          <button className="nav-btn next" onClick={slideRight}>
+            <i className="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default Teachers;
+export default TeachersSlider;

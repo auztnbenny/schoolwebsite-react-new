@@ -53,7 +53,7 @@ function Header() {
             <Nav.Link href="contact.html">Contact Us</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="Cbse-Disclosure.html">CBSE-Disclosure</Nav.Link>
+            <Nav.Link href="Cbse-Disclosure.html" className="cbse-disclosure">CBSE-Disclosure</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

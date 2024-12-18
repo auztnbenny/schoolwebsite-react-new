@@ -10,13 +10,13 @@ function Footer() {
       <div className="footer-wrap">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="footer_logo">
                 <img src={logo} alt="Footer Logo" />
               </div>
               <p>Saint Arnold's School: Empowering Minds, Nurturing Futures and is committed to providing quality education.</p>
             </div>
-            <div className="col-lg-2 col-md-3">
+            <div className="col-lg-2 col-md-3 col-sm-6">
               <h3>Quick links</h3>
               <ul className="footer-links">
                 <li>
@@ -33,7 +33,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-4">
+            <div className="col-lg-3 col-md-4 col-sm-6">
               <h3>Office Hours</h3>
               <ul className="hourswrp">
                 <li>
@@ -59,7 +59,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-4">
+            <div className="col-lg-3 col-md-4 col-sm-12">
               <div className="footer_info">
                 <h3>Get in Touch</h3>
                 <ul className="footer-adress">

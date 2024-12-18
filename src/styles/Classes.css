@@ -1,15 +1,63 @@
-/* Classes.css - Latest News Styles */
 .class-wrap {
-  padding: 80px 0;
-  background: #f9f9f9;
+  background: url('../../assets/images/class-bg.jpg') no-repeat top;
+  background-size: cover;
+  padding: 70px 0;
+  margin-bottom: 40px;
+}
+.classes-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 40px; /* Add bottom margin to create space */
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.title p {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.class-slider-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+.class-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.class-slider-track {
+  display: flex;
+  gap: 30px;
 }
 
 .class_box {
+  min-width: calc(33.333% - 20px);
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding-bottom: 30px; /* Add padding bottom */
+  margin-bottom: 70px; /* Add margin bottom */
+}
+
+.class_Img {
+  position: relative;
 }
 
 .class_Img img {
@@ -19,11 +67,217 @@
 }
 
 .time_box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255,182,7,0.9);
+  background: #3ab64c;
+  font-size: 14px;
   color: #fff;
-  padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: 6px 6px 0 0;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.path_box {
+  padding: 26px 26px 16px 26px;
+  min-height: 246px;
+}
+
+.path_box h3 {
+  min-height: 66px;
+}
+
+.path_box h3 a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.path_box h3 a:hover {
+  color: #f0aa00;
+}
+
+.path_box p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #322c2c;
+  margin-bottom: 0;
+  min-height: 80px;
+}
+
+.students_box {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.students, .stud_fee {
+  font-size: 16px;
+  color: #000;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ccc;
+  color: #a5a9ac;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #ffa800;
+  border-color: #ffa800;
+  color: #fff;
+}
+
+.nav-button.prev {
+  left: 0;
+}
+
+.nav-button.next {
+  right: 0;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Styles for Latest News Section */
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+}
+
+.owl-carousel .class_box {
+  min-width: calc(33.333% - 20px);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 0 10px;
+}
+
+.owl-carousel .class_Img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.owl-carousel .time_box {
+  background: #3ab64c;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.owl-carousel .path_box {
+  padding: 26px 26px 16px 26px;
+  min-height: 246px;
+}
+
+.owl-carousel .path_box h3 {
+  min-height: 66px;
+}
+
+.owl-carousel .path_box h3 a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.owl-carousel .path_box h3 a:hover {
+  color: #f0aa00;
+}
+
+.owl-carousel .path_box p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #322c2c;
+  margin-bottom: 0;
+  min-height: 80px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .class_box {
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .class_box {
+    min-width: 100%;
+  }
+  
+  .title h1 {
+    font-size: 32px;
+  }
+  
+  .title p {
+    font-size: 16px;
+  }
+  
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .class-wrap {
+    padding: 40px 0;
+  }
+  
+  .class-slider-container {
+    padding: 0 30px;
+  }
+  
+  .path_box {
+    padding: 15px;
+  }
+}
+
+/* Additional Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.class-wrap .title h1 {
+  color: #fff;
+}
+
+.title h1 {
+  font-size: 48px;
+  color: #56225e;
+  margin: 0;
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }

@@ -836,7 +836,7 @@ a.slidebtn i {
         Class Css
 ********************************/
 .class-wrap {
-  background: url(../images/class-bg.jpg) no-repeat top;
+  background: url(../src/assets/images/class-bg.jpg) no-repeat top;
   background-size: cover;
   padding: 70px 0;
 }
@@ -1780,7 +1780,7 @@ button:focus {
     background-color: #fff;
 }
 
-.teachers-content{text-align: center;}
+teachers-content{text-align: center;}
 .teachers-content h3{font-size: 24px; font-weight: 600;}
 .designation{font-size: 14px; font-family: 'Montserrat', sans-serif; letter-spacing: 2px;}
 .center_title{text-align: center;}
@@ -2359,7 +2359,7 @@ blockquote::before {
 
 .single-widgets.widget_category ul li a{text-decoration: none; color: #000; font-size: 14px;}
 .single-widgets.widget_category ul li a:hover{color: #ffb900;}
-.single-widgets.widget_category ul li:first-child {
+single-widgets.widget_category ul li:first-child {
     border-top: none;
 }
 .single-widgets.widget_category ul li a span {
@@ -2374,7 +2374,7 @@ blockquote::before {
 .property_sec li:first-child{border-top: none !important; padding-top: 0 !important;}
 .single-widgets ul{margin-bottom: 0;}
 .single-widgets.widget_category ul li:first-child{border-top: none; padding-top: 0;}
-.single-widgets.widget_category ul li:last-child{border: none; padding-bottom: 0;}
+single-widgets.widget_category ul li:last-child{border: none; padding-bottom: 0;}
 .rec_proprty {
     display: flex;
 }

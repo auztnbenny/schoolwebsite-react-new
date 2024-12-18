@@ -1,0 +1,139 @@
+.choice-wrap {
+    padding: 60px 0 70px 0;
+    text-align: center;
+    background: url('../src/assets/images/choice-bg.jpg') no-repeat top;
+    background-size: cover;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .choice-wrap .title {
+    margin-bottom: 30px;
+  }
+  
+  .choice-wrap .title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .choice-wrap p {
+    color: #000;
+    font-size: 14px;
+    padding: 0 140px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .callText {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  .choice-wrap .readmore {
+    margin-top: 30px;
+  }
+  
+  .choice-wrap .readmore a {
+    background: #ee3131;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 40px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .choice-wrap .readmore a i {
+    margin-right: 8px;
+  }
+  
+  .choice-wrap .readmore a:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .choice-wrap .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .choice-wrap h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 991px) {
+    .choice-wrap p {
+      padding: 0;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .choice-wrap {
+      padding: 40px 0;
+    }
+  
+    .choice-wrap .title h1 {
+      font-size: 36px;
+    }
+  
+    .callText {
+      font-size: 20px;
+    }
+  
+    .choice-wrap .readmore a {
+      padding: 14px 30px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .choice-wrap .title h1 {
+      font-size: 28px;
+    }
+  
+    .choice-wrap p {
+      font-size: 13px;
+      padding: 0 20px;
+    }
+  
+    .callText {
+      font-size: 18px;
+    }
+  
+    .choice-wrap .readmore a {
+      padding: 12px 25px;
+      font-size: 13px;
+    }
+  }
+
+  .title h1 {
+    font-size: 48px;
+    color: #56225e;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .h1, h1 {
+    font-size: 2.5rem;
+  }
+
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }

@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import Header from './components/Header';
 import SliderComponent from './components/SliderComponent';
@@ -11,6 +10,8 @@ import Teachers from './components/Teachers';
 import Gallery from './components/Gallery';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Video from './components/Video';
+import Choice from './components/Choice';
 import './styles/App.css';
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
       <Categories />
       <About />
       <Classes />
+      {/* <Choice /> 
+      <Video />  */}
+      <Gallery /> {/* Ensure Gallery component is rendered below Video */}
       <Testimonials />
       <Enroll />
       <Teachers />
-      <Gallery />
       <Newsletter />
       <Footer />
     </div>

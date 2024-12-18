@@ -7,11 +7,32 @@
     text-align: center;
   }
   
+  .enroll-wrap {
+    background: url(../src/assets/images/enroll-bg.jpg) !important;
+    padding: 100px 0;
+  }
+  
   .choice-wrap.enroll-wrap .title h1 {
     font-size: 2rem;
     margin-bottom: 20px;
   }
   
+  .enroll-wrap .title h1 {
+    color: #fff;
+  }
+
+  .choice-wrap .title h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .title h1 {
+    font-size: 48px;
+    color: #56225e;
+    margin: 0;
+    font-weight: bold;
+  }
+
   .phonewrp {
     display: flex;
     align-items: center;
@@ -31,5 +52,12 @@
   }
   
   .phonewrp a:hover {
-    color: #d1e7fd;
+    color: #ffb607;
+  }
+
+  a {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    color: #ffb607;
   }

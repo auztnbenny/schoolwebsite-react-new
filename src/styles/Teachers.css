@@ -1,31 +1,234 @@
-/* src/styles/Teachers.css */
+.teacher-wrap {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.teacher-wrap .title {
+  margin-bottom: 50px;
+}
+
+.teacher-wrap .title h1 {
+  font-size: 48px;
+  color: #56225e;
+  margin: 0;
+  font-weight: bold;
+}
+
+.teacher-slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.teacher-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  -webkit-overflow-scrolling: touch;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.teacher-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.single-teachers {
+  min-width: 300px;
+  margin: 0 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.teacherImg {
+  position: relative;
+  overflow: hidden;
+}
+
+.teacherImg img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  margin: 0;
+  opacity: 0;
+  z-index: 9;
+  background-color: rgba(226, 12, 12, 0.8);
+  transition: all 0.5s ease;
+}
+
+.single-teachers:hover .social-icons {
+  opacity: 1;
+  bottom: 0;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0;
+}
+
+.social-icons a {
+  color: #fff;
+  background: #56225e;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.teachers-content {
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+}
+
+.teachers-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.teachers-content .designation {
+  display: block;
+  font-size: 16px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.designation {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #56225e;
+}
+
+.nav-btn:hover {
+  background: #ffb607;
+  color: #fff;
+  border-color: #ffb607;
+}
+
+.nav-btn.prev {
+  position: absolute;
+  left: 0;
+}
+
+.nav-btn.next {
+  position: absolute;
+  right: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+  .teacher-wrap {
+    padding: 40px 0;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 36px;
+  }
+
+  .single-teachers {
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacher-wrap .title h1 {
+    font-size: 30px;
+  }
+
+  .single-teachers {
+    min-width: 200px;
+  }
+
+  .teachers-content {
+    padding: 20px;
+  }
+
+  .teachers-content h3 {
+    font-size: 20px;
+  }
+
+  .teachers-content .designation {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .teacher-slider-container {
+    padding: 0 30px;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 24px;
+  }
+
+  .single-teachers {
+    min-width: 150px;
+  }
+
+  .teachers-content {
+    padding: 15px;
+  }
+
+  .teachers-content h3 {
+    font-size: 18px;
+  }
+
+  .teachers-content .designation {
+    font-size: 12px;
+  }
+
+  .nav-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .class-wrap {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-  }
-  
-  .class-wrap .title h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-  }
-  
-  .class_box {
-    background-color: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .class_box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-  
-  .class_Img img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
+  background: url(../images/class-bg.jpg) no-repeat top;
+  background-size: cover;
+  padding: 70px 0;
+}

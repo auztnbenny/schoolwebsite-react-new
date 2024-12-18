@@ -6,8 +6,9 @@
   }
   
   .newsletter-wrap .title h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 0;
   }
   
   .news-info form {
@@ -38,15 +39,150 @@
   .signup {
     margin-left: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #000; /* Change background to black */
     border: none;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin bottom */
   }
   
   .signup:hover {
     background-color: #0056b3;
   }
+
+.title h1 {
+    font-size: 48px;
+    color: #56225e;
+    margin: 0;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+/* .element.style {
+  // Add any specific styles here if needed
+} */
+
+.newsletter-wrap {
+  background: #e20c0c;
+  padding: 35px 45px;
+  z-index: 1000;
+  position: relative;
+}
+
+.newsletter-wrap .sigup {
+    background: #000 none repeat scroll 0 0;
+    border: medium none;
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 30px;
+    position: absolute;
+    right: 0px;
+    text-transform: uppercase;
+    bottom: 0px;
+    border-radius: 0;
+    top: 0px;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input-group > .custom-select:not(:last-child), 
+.input-group > .form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.newsletter-wrap .form-control {
+    border: none;
+    border-radius: inherit;
+    box-shadow: inherit;
+    padding: 34px 22px 34px 65px;
+    font-size: 16px;
+    color: #767676;
+}
+
+.input-group > .custom-file, 
+.input-group > .custom-select, 
+.input-group > .form-control, 
+.input-group > .form-control-plaintext {
+    position: relative;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+[type=button]:not(:disabled), 
+[type=reset]:not(:disabled), 
+[type=submit]:not(:disabled), 
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+[type=button], 
+[type=reset], 
+[type=submit], 
+button {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    border-radius: 0;
+}
