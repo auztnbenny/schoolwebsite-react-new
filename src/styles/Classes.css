@@ -1,8 +1,9 @@
 .class-wrap {
   background: url('../../assets/images/class-bg.jpg') no-repeat top;
   background-size: cover;
-  padding: 70px 0;
+  padding: 70px 0 100px;
   margin-bottom: 40px;
+  padding-bottom: 140px;
 }
 .classes-container {
   padding: 20px;
@@ -52,8 +53,6 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  padding-bottom: 30px; /* Add padding bottom */
-  margin-bottom: 70px; /* Add margin bottom */
 }
 
 .class_Img {
@@ -280,4 +279,49 @@ div {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+}
+
+.fa-arrow-right:before {
+    content: "\f061";
+}
+
+.class-wrap .owl-nav i {
+    font-size: 30px;
+}
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.fa, .fas, .far, .fal, .fad, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+i {
+    font-style: italic;
+}
+
+.class-wrap .owl-nav button {
+    font-size: 16px;
+    color: #a5a9ac;
+    border: 2px solid #ccc;
+    background: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
 }

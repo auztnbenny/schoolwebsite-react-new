@@ -1,15 +1,29 @@
 .teacher-wrap {
   padding: 60px 0;
   text-align: center;
+  background: url(../src/assets/images/class-bg.jpg) no-repeat top;
+  background-size: cover;
+  padding: 70px 0;
 }
 
 .teacher-wrap .title {
   margin-bottom: 50px;
 }
 
+.teacher-wrap .title:after {
+  content: "";
+  width: 54px;
+  height: 2px;
+  background: #ddb202;
+  margin-left: -26px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+}
+
 .teacher-wrap .title h1 {
   font-size: 48px;
-  color: #56225e;
+  color: #ffffff;
   margin: 0;
   font-weight: bold;
 }

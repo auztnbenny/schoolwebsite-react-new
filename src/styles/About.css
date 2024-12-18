@@ -1,6 +1,6 @@
-/* About.css - About Section Styles */
 .about-wrap {
-  padding: 100px 0;
+  padding: 50px 0;
+  padding-bottom: 30px; /* Added bottom padding */
 }
 
 .aboutImg img {
@@ -9,35 +9,78 @@
 }
 
 .about_box {
-  padding: 30px;
+  padding: 0;
   margin-left: 30px;
+  
+}
+
+.about_box .title h1 {
+  margin-bottom: 20px;
 }
 
 .edu_list {
   list-style: none;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .learing-wrp {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.edu_icon {
+    background: #000;
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    border-radius: 100%;
+    margin-right: 20px;
+    display: table;
+}
+
+.edu_icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.learn_info {
+  margin-left: 10px;
 }
 
 .about-wrap .title h1 {
-    font-size: 48px;
-    color: #000;
+  font-size: 48px;
+  color: #000;
+  font-weight: bold;
 }
 
-.title h1 {
-    font-size: 48px;
-    color: #56225e;
-    margin: 0;
-    font-weight: bold;
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+  font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+p {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+special-education {
+    color: red;
+}
+
+.edu_list li:nth-child(1) .edu_icon {
+    background: #3db2d5;
+}
+
+.edu_list li:nth-child(2) .edu_icon {
+    background: #3ab64c;
+}
+
+.edu_list li:nth-child(3) .edu_icon {
+    background: #dd1146;
 }
 
 * {
@@ -49,32 +92,22 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
+.title h1 span {
+    display: block;
 }
 
-body {
+.title h1 {
+    font-size: 48px;
+    color: #56225e;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
+    font-weight: bold;
     text-align: left;
-    background-color: #fff;
 }
 
-@media (min-width: 992px) {
-    .col-lg-7 {
-        -ms-flex: 0 0 58.333333%;
-        flex: 0 0 58.333333%;
-        max-width: 58.333333%;
-    }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+.h1, h1 {
+    font-size: 2.5rem;
 }

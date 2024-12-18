@@ -1,4 +1,3 @@
-// src/components/About.jsx
 import React from 'react';
 import aboutImg from '../assets/images/aboutImg.png';
 import education from '../assets/images/education.png';
@@ -53,7 +52,12 @@ function About() {
                         <img src={feature.icon} alt={feature.title} />
                       </div>
                       <div className="learn_info">
-                        <h3 style={{ color: 'red' }}>{feature.title}</h3>
+                        <h3
+                          className={feature.title === 'Special Education' ? 'special-education' : ''}
+                          style={{ color: 'red' }}
+                        >
+                          {feature.title}
+                        </h3>
                         <p>{feature.description}</p>
                       </div>
                     </div>

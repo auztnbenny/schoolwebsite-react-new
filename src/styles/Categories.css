@@ -1,8 +1,9 @@
 /* Categories.css - Course Categories Styles */
 .our-course-categories-two {
-  padding: 80px 0;
-  background: #f9f9f9;
+  padding: 80px 0 10px;
+  
 }
+
 
 .categories-course {
   background: #3ab64c;
@@ -11,6 +12,10 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
+  height: 450px; /* Set a fixed height for uniform length */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .categories-course:hover {
