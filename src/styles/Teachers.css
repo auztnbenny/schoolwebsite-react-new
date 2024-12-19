@@ -95,7 +95,7 @@
   right: 0;
 }
 .class-wrap {
-  background: url(../assets/images/class-bg.jpg) no-repeat top;
+  background: url('/assets/images/class-bg.jpg') no-repeat top;
   background-size: cover;
   padding: 0px 0;
 }
