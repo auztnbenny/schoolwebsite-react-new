@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
-
+import { Image } from 'react-bootstrap';
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,7 +46,7 @@ const SliderComponent = () => {
 
   const sliderData = [
     {
-      image: '/src/slider01.png',
+      image: '/src/assets/images/slider01.png',
       title: 'Education Bright Future',
       description: 'Education illuminates the path to a brighter future, offering skills and opportunities for personal and societal growth. A quality education shapes a promising future.',
       buttons: [
@@ -88,10 +88,8 @@ const SliderComponent = () => {
       <Slider {...settings}>
         {sliderData.map((slide, index) => (
           <div key={index} className="slider-item">
-            <div
-              className="slider-image"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
+            <div className="slider-image">
+              <img src={slide.image} alt={`slide-${index}`} />
               <div className="slider-content">
                 <h2 className={`animate-title ${currentSlide === index ? 'animate-in' : ''}`}>{slide.title}</h2>
                 <p className={`animate-description ${currentSlide === index ? 'animate-in' : ''}`}>{slide.description}</p>
