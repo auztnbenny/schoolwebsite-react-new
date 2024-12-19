@@ -1,7 +1,7 @@
 .choice-wrap {
     padding: 60px 0 70px 0;
     text-align: center;
-    background: url('../src/assets/images/choice-bg.jpg') no-repeat top;
+    background: url('/assets/images/choice-bg.jpg') no-repeat top;
     background-size: cover;
     padding: 50px;
     background-color: #ffffff;

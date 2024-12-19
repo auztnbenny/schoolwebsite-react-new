@@ -9,32 +9,32 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'src/assets/images/gallery-1.jpg',
+      src: '/assets/images/gallery-1.jpg',
       title: 'Gallery Image 1'
     },
     {
       id: 2,
-      src: 'src/assets/images/gallery-2.jpg',
+      src: '/assets/images/gallery-2.jpg',
       title: 'Gallery Image 2'
     },
     {
       id: 3,
-      src: 'src/assets/images/gallery-3.jpg',
+      src: '/assets/images/gallery-3.jpg',
       title: 'Gallery Image 3'
     },
     {
       id: 4,
-      src: 'src/assets/images/gallery-4.jpg',
+      src: '/assets/images/gallery-4.jpg',
       title: 'Gallery Image 4'
     },
     {
       id: 5,
-      src: 'src/assets/images/gallery-5.jpg',
+      src: '/assets/images/gallery-5.jpg',
       title: 'Gallery Image 5'
     },
     {
       id: 6,
-      src: 'src/assets/images/gallery-6.jpg',
+      src: '/assets/images/gallery-6.jpg',
       title: 'Gallery Image 6'
     }
   ];

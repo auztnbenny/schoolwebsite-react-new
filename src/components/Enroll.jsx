@@ -1,7 +1,7 @@
 // src/components/Enroll.jsx
 import React from 'react';
 import '../styles/Enroll.css';
-import phoneIcon from '../assets/images/phone_icon.png';
+import phoneIcon from '/assets/images/phone_icon.png';
 
 function Enroll() {
   return (

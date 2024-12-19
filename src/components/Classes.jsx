@@ -11,19 +11,19 @@ const Classes = () => {
 
   const news = [
     {
-      image: '/src/assets/images/PTM.jpg',
+      image: '/assets/images/PTM.jpg',
       title: 'Parent-Teacher Meeting (PTM)',
       description: "Discussing student's progress and well-being. Saturday, 26/10/2024",
       time: '08:30 AM - 11:00 AM'
     },
     {
-      image: '/src/assets/images/children_day.jpg',
+      image: '/assets/images/children_day.jpg',
       title: 'Children Day',
       description: '"Today\'s children shape India\'s future; how we raise them defines our nation\'s destiny." Pandit Jawaharlal Nehru November 14, 2024',
       time: '8.30 AM - 12:00PM'
     },
     {
-      image: '/src/assets/images/DaanUtsav.jpg',
+      image: '/assets/images/DaanUtsav.jpg',
       title: 'Daan Utsav',
       description: 'Daan Utsav promotes the spirit of giving, encouraging students to share resources with underprivileged communities. November 23, 2024',
       time: '09:00 AM - 11:00 AM'
@@ -47,7 +47,7 @@ const Classes = () => {
   };
 
   return (
-    <div className="class-wrap" style={{ background: "url('/src/assets/images/class-bg.jpg') no-repeat top", backgroundSize: "cover" }}>
+    <div className="class-wrap" style={{ background: "url('/assets/images/class-bg.jpg') no-repeat top", backgroundSize: "cover" }}>
       <div className="container">
         <div className="title">
           <h1>Our Latest News</h1>

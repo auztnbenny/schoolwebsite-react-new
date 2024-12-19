@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import '../styles/Footer.css';
-import logo from '../assets/images/logo.png';
+import logo from '/assets/images/logo.png';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMapSigns, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 function Footer() {

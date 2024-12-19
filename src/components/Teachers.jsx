@@ -3,9 +3,9 @@ import '../styles/Teachers.css';
 
 const TeachersSlider = () => {
   const teachers = [
-    { image: '/src/assets/images/SANJUKTA2.jpg' },
-    { image: '/src/assets/images/PSUNITAPAUL2.jpg' },
-    { image: '/src/assets/images/GEETASETHI2.jpg' },
+    { image: '/assets/images/SANJUKTA2.jpg' },
+    { image: '/assets/images/PSUNITAPAUL2.jpg' },
+    { image: '/assets/images/GEETASETHI2.jpg' },
   ];
 
   const sliderRef = useRef(null);
