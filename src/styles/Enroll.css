@@ -8,7 +8,7 @@
   }
   
   .enroll-wrap {
-    background: url(../src/assets/images/enroll-bg.jpg) !important;
+    background: url(/assets/images/enroll-bg.jpg) !important;
     padding: 100px 0;
   }
   

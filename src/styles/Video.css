@@ -12,7 +12,7 @@
 
 .video {
   color: #fff;
-  background: url('../src/assets/images/large_img.jpg') no-repeat top; /* Ensure the background image is large_img.jpg */
+  background: url('/assets/images/large_img.jpg') no-repeat top; /* Ensure the background image is large_img.jpg */
   background-size: cover;
   padding: 250px 0;
   border: 14px solid #fff;
