@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
+import slider01 from '../assets/images/slider01.png';
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
