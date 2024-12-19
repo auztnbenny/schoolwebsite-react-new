@@ -45,7 +45,7 @@ const SliderComponent = () => {
 
   const sliderData = [
     {
-      image: 'src/assets/images/slider01.jpg',
+      image: './src/assets/images/slider01.jpg',
       title: 'Education Bright Future',
       description: 'Education illuminates the path to a brighter future, offering skills and opportunities for personal and societal growth. A quality education shapes a promising future.',
       buttons: [
