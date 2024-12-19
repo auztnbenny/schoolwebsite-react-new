@@ -3,8 +3,9 @@
     text-align: center;
     background: url('../src/assets/images/choice-bg.jpg') no-repeat top;
     background-size: cover;
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 50px;
+    background-color: #ffffff;
+    
   }
   
   .choice-wrap .title {
@@ -14,8 +15,9 @@
   .choice-wrap .title h1 {
     font-size: 48px;
     font-weight: bold;
-    color: #000;
+    color: #56225e;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   .choice-wrap p {
@@ -25,7 +27,6 @@
     line-height: 1.6;
     margin-bottom: 30px;
     font-size: 18px;
-    color: #666;
   }
   
   .callText {

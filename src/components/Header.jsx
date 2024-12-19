@@ -71,7 +71,7 @@ const Header = () => {
           </div>
 
           {/* CBSE Disclosure Section */}
-          <div className="col-lg-3 text-end">
+          <div className="col-lg-3 col-md-12 text-end">
             <div className="header_info">
               <a href="Cbse-Disclosure.html" className="btn-disclosure">
                 CBSE-Disclosure

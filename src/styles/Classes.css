@@ -1,27 +1,35 @@
 .class-wrap {
-  background: url('../../assets/images/class-bg.jpg') no-repeat top;
-  background-size: cover;
-  padding: 70px 0 100px;
+  padding: 0px 0 0px;
   margin-bottom: 40px;
   padding-bottom: 140px;
+  color: #fff;
+  background: #000;
 }
+
 .classes-container {
   padding: 20px;
-  background-color: #f9f9f9;
-  margin-bottom: 40px; /* Add bottom margin to create space */
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+  color: black;
 }
 
 .title {
+  display: flex; /* Added */
+  align-items: center; /* Added to center vertically */
+  justify-content: center; /* Ensures horizontal centering remains */
   text-align: center;
   position: relative;
   margin-bottom: 60px;
+  flex-direction: column; /* Added */
+  padding-top: 50px;
 }
 
 .title h1 {
-  color: #fff;
   font-size: 48px;
+  color: #56225e;
   margin: 0;
   font-weight: bold;
+  text-align: justify;
 }
 
 .title p {
@@ -53,6 +61,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 80px;
 }
 
 .class_Img {
@@ -270,13 +279,6 @@ div {
   color: #fff;
 }
 
-.title h1 {
-  font-size: 48px;
-  color: #56225e;
-  margin: 0;
-  font-weight: bold;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -306,10 +308,22 @@ h1, h2, h3, h4, h5, h6 {
 
 i {
     font-style: italic;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+i {
+    font-style: italic;
 }
 
 .class-wrap .owl-nav button {
     font-size: 16px;
+    color: #a5a9ac;
+    border: 2px solid #ccc;
+    background: none;
+    width: 60px;
+    height: 60px;
     color: #a5a9ac;
     border: 2px solid #ccc;
     background: none;
