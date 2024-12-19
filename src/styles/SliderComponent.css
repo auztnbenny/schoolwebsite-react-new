@@ -188,6 +188,32 @@
 }
 
 /* Responsive adjustments for large tablets */
+@media (max-width: 1200px) {
+  .slider-container {
+    height: 600px;
+  }
+
+  .slider-content h2 {
+    font-size: 40px;
+  }
+
+  .slider-content p {
+    font-size: 16px;
+  }
+
+  .slider-button {
+    padding: 20px 35px;
+    font-size: 16px;
+  }
+
+  .tp-arr-iwrapper {
+    font-size: 28px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
 @media (max-width: 992px) {
   .slider-container {
     height: 500px;

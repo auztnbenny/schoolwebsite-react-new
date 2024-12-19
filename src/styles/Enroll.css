@@ -62,3 +62,27 @@
     transition: all .3s ease;
     color: #ffb607;
   }
+
+@media (max-width: 1200px) {
+  .choice-wrap.enroll-wrap .title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .choice-wrap.enroll-wrap .title h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .choice-wrap.enroll-wrap .title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .choice-wrap.enroll-wrap .title h1 {
+    font-size: 1.2rem;
+  }
+}

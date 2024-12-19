@@ -125,3 +125,131 @@
     margin-top: 10px;
   }
 }
+
+/* Mobile Devices: 320px - 480px */
+@media (max-width: 480px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-light .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .header_info .btn-disclosure {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* Tablets/iPads: 481px - 768px */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_info {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Small Screens/Laptops: 769px - 1024px */
+@media (max-width: 1024px) {
+  .nav-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Desktops/Large Screens: 1025px - 1200px */
+@media (max-width: 1200px) {
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Extra Large Screens/TVs: 1201px and above */
+@media (min-width: 1201px) {
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ...existing code... */
+
+@media screen and (max-width: 1200px) {
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_info {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-light .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .header_info .btn-disclosure {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}

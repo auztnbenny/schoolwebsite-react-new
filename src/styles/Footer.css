@@ -172,6 +172,86 @@ a:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 1200px) {
+  .footer-wrap {
+    text-align: center;
+  }
+
+  .footer_logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-links,
+  .hourswrp,
+  .footer-adress {
+    text-align: left;
+  }
+
+  .social-icons ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-wrap {
+    text-align: center;
+  }
+
+  .footer_logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-links,
+  .hourswrp,
+  .footer-adress {
+    text-align: left;
+  }
+
+  .social-icons ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrap {
+    text-align: center;
+  }
+
+  .footer_logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-links,
+  .hourswrp,
+  .footer-adress {
+    text-align: left;
+  }
+
+  .social-icons ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-wrap {
+    text-align: center;
+  }
+
+  .footer_logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-links,
+  .hourswrp,
+  .footer-adress {
+    text-align: left;
+  }
+
+  .social-icons ul {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-wrap {
     text-align: center;

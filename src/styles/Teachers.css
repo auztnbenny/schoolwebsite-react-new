@@ -99,3 +99,75 @@
   background-size: cover;
   padding: 0px 0;
 }
+
+@media screen and (max-width: 1200px) {
+  .teacher-wrap {
+    padding: 50px 0;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 42px;
+  }
+
+  .teacher-slider-container {
+    padding: 0 30px;
+  }
+
+  .single-teachers {
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .teacher-wrap {
+    padding: 40px 0;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 36px;
+  }
+
+  .teacher-slider-container {
+    padding: 0 20px;
+  }
+
+  .single-teachers {
+    min-width: 260px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacher-wrap {
+    padding: 30px 0;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 30px;
+  }
+
+  .teacher-slider-container {
+    padding: 0 10px;
+  }
+
+  .single-teachers {
+    min-width: 240px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teacher-wrap {
+    padding: 20px 0;
+  }
+
+  .teacher-wrap .title h1 {
+    font-size: 24px;
+  }
+
+  .teacher-slider-container {
+    padding: 0 5px;
+  }
+
+  .single-teachers {
+    min-width: 220px;
+  }
+}

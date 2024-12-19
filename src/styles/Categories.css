@@ -193,3 +193,27 @@ p {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
+
+@media (max-width: 1200px) {
+  .categories-course {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .categories-course {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-course {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .categories-course {
+    height: 250px;
+  }
+}
