@@ -1,30 +1,48 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/Teachers.css';
 
 const TeachersSlider = () => {
   const teachers = [
-    {
-      image: '/src/assets/images/SANJUKTA2.jpg'
-    },
-    {
-      image: '/src/assets/images/PSUNITAPAUL2.jpg'
-    },
-    // {
-    //   image: '/images/P SUNITA PAUL2.jpg'
-    // },
-    {
-      image: 'src/assets/images/GEETASETHI2.jpg'
-    }
+    { image: '/src/assets/images/SANJUKTA2.jpg' },
+    { image: '/src/assets/images/PSUNITAPAUL2.jpg' },
+    { image: '/src/assets/images/GEETASETHI2.jpg' },
   ];
 
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const handleScroll = () => {
+      if (slider.scrollLeft === 0) {
+        slider.scrollLeft = slider.scrollWidth - slider.offsetWidth * 2;
+      } else if (
+        slider.scrollLeft + slider.offsetWidth >=
+        slider.scrollWidth
+      ) {
+        slider.scrollLeft = slider.offsetWidth;
+      }
+    };
+
+    slider.addEventListener('scroll', handleScroll);
+    return () => {
+      slider.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const clonedFirst = [...teachers, ...teachers];
+    slider.scrollLeft = slider.offsetWidth;
+  }, [teachers]);
+
   const slideLeft = () => {
-    const slider = document.getElementById('teacherSlider');
-    slider.scrollLeft = slider.scrollLeft - 300;
+    const slider = sliderRef.current;
+    slider.scrollLeft -= 300;
   };
 
   const slideRight = () => {
-    const slider = document.getElementById('teacherSlider');
-    slider.scrollLeft = slider.scrollLeft + 300;
+    const slider = sliderRef.current;
+    slider.scrollLeft += 300;
   };
 
   return (
@@ -39,8 +57,8 @@ const TeachersSlider = () => {
             <i className="fas fa-chevron-left"></i>
           </button>
 
-          <div className="teacher-slider" id="teacherSlider">
-            {teachers.map((teacher, index) => (
+          <div className="teacher-slider" id="teacherSlider" ref={sliderRef}>
+            {teachers.concat(teachers).map((teacher, index) => (
               <div key={index} className="single-teachers">
                 <div className="teacherImg">
                   <img src={teacher.image} alt={`Teacher ${index + 1}`} />
