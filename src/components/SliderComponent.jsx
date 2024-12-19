@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
-import slider01 from '../assets/images/slider01.png';
+
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,7 +46,7 @@ const SliderComponent = () => {
 
   const sliderData = [
     {
-      image: '../assets/images/slider01.png',
+      image: '../src/assets/images/slider01.png',
       title: 'Education Bright Future',
       description: 'Education illuminates the path to a brighter future, offering skills and opportunities for personal and societal growth. A quality education shapes a promising future.',
       buttons: [
@@ -55,7 +55,7 @@ const SliderComponent = () => {
       ],
     },
     {
-      image: 'src/assets/images/slider02.jpg',
+      image: '/src/assets/images/slider02.jpg',
       title: "Saint Arnold's School",
       description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
       buttons: [
@@ -63,7 +63,24 @@ const SliderComponent = () => {
         { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
       ],
     },
-    // Additional slides
+    {
+      image: '/src/assets/images/slider03.jpg',
+      title: "Saint Arnold's School",
+      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
+      buttons: [
+        { text: 'Enroll Today', icon: 'fas fa-edit', link: '#' },
+        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
+      ],
+    },
+    {
+      image: '/src/assets/images/slider04.jpg',
+      title: "Saint Arnold's School",
+      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
+      buttons: [
+        { text: 'Enroll Today', icon: 'fas fa-edit', link: '#' },
+        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
+      ],
+    },
   ];
 
   return (
