@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import logo from '../assets/images/logo.png';
 import '../styles/Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -24,14 +25,14 @@ const Header = () => {
               <Navbar.Toggle aria-controls="navbarSupportedContent" />
               <Navbar.Collapse id="navbarSupportedContent">
                 <Nav className="mx-auto nav-list">
-                  <Nav.Link href="index.html" className="nav-item nav-link">
+                  <Nav.Link as={Link} to="/" className="nav-item nav-link">
                     Home
                   </Nav.Link>
                   <NavDropdown title="About" id="about-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item href="History.html">History</NavDropdown.Item>
-                    <NavDropdown.Item href="vision.html">Vision</NavDropdown.Item>
-                    <NavDropdown.Item href="Presidents-Message.html">President's Message</NavDropdown.Item>
-                    <NavDropdown.Item href="Principals-Message.html">Principal's Message</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/History">History</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/Vision">Vision</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/president">President's Message</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/principal">Principal's Message</NavDropdown.Item>
                     <NavDropdown.Item href="smc.html">SMC</NavDropdown.Item>
                     <NavDropdown.Item href="shc.html">SHC</NavDropdown.Item>
                   </NavDropdown>
@@ -59,10 +60,10 @@ const Header = () => {
                     <NavDropdown.Item href="child-protection-policy.html">Child Protection Policy</NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="Gallery" id="gallery-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item href="https://www.arnoldschoolsalajpur.in/Albums/Photos.html">Photos</NavDropdown.Item>
-                    <NavDropdown.Item href="https://www.arnoldschoolsalajpur.in/Albums/Videos.html">Videos</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/gallery">Photos</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/gallery">Videos</NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="contact.html" className="nav-item nav-link">
+                  <Nav.Link as={Link} to="/contact" className="nav-item nav-link">
                     Contact Us
                   </Nav.Link>
                 </Nav>
