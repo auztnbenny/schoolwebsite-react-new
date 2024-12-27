@@ -16,8 +16,10 @@ import Choice from './components/Choice';
 import Video from './components/Video';
 import Vision from './components/pages/about/vision';
 import Contact from './components/pages/contact';
+import CBSE from './components/pages/cbsedisclosure';
 import President from './components/pages/about/president';
 import Principal from './components/pages/about/principal';
+import ClassSchedule from './components/pages/academics/classschedule';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
           </div>
         } />
         <Route path="/history" element={<History />} />
+        <Route path="/cbse" element={<CBSE />} />
+        <Route path="/classschedule" element={<ClassSchedule />} />
         <Route path="/president" element={<President />} />
         <Route path="/principal" element={<Principal />} />
         <Route path="/contact" element={<Contact />} />

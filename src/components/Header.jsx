@@ -44,7 +44,7 @@ const Header = () => {
                   <NavDropdown title="Academics" id="academics-dropdown" className="nav-item nav-link">
                     <NavDropdown.Item href="syllabus.html">Syllabus</NavDropdown.Item>
                     <NavDropdown.Item href="rules-&-regulations.html">Rules & Regulations</NavDropdown.Item>
-                    <NavDropdown.Item href="class-schedule.html">Class Schedule</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/classschedule">Class Schedule</NavDropdown.Item>
                     <NavDropdown.Item href="exam-schedule.html">Exam Schedule</NavDropdown.Item>
                     <NavDropdown.Item href="results.html">Results</NavDropdown.Item>
                     <NavDropdown.Item href="school-fees.html">School Fees</NavDropdown.Item>
@@ -74,9 +74,9 @@ const Header = () => {
           {/* CBSE Disclosure Section */}
           <div className="col-lg-3 col-md-12 text-end">
             <div className="header_info">
-              <a href="Cbse-Disclosure.html" className="btn-disclosure">
+              <Link to="/cbse" className="btn-disclosure">
                 CBSE-Disclosure
-              </a>
+              </Link>
             </div>
           </div>
         </div>
