@@ -20,16 +20,16 @@ function Footer() {
               <h3>Quick links</h3>
               <ul className="footer-links">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="about.html">About</a>
+                  <a href="/aboutus">About</a>
                 </li>
                 <li>
-                  <a href="blog.html">Blog</a>
+                  <a href="/blog">Blog</a>
                 </li>
                 <li>
-                  <a href="contact.html">Contact Us</a>
+                  <a href="/contact">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -114,7 +114,7 @@ function Footer() {
         <div className="container">
           <div className="copyright-text">
             Copyright © 2025{' '}
-            <a href="https://www.arnoldschoolsalajpur.in">Arnoldschoolsalajpur.in</a> &nbsp; All Rights Reserved Powered by
+            <a href="https://arnoldschoolsalajpur.in/">Arnoldschoolsalajpur.in</a> &nbsp; All Rights Reserved Powered by
             digitalweb.in
           </div>
         </div>

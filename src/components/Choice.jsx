@@ -18,7 +18,7 @@ const Choice = () => {
           </i>
         </p>
         <div className="readmore">
-          <a href="contact.html">Contact Us</a>
+          <a href="/contact">Contact Us</a>
         </div>
       </div>
     </div>

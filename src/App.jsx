@@ -13,6 +13,8 @@ import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import History from './components/pages/about/history'; // Import the History component
 import Choice from './components/Choice';
+import Aboutus from './components/pages/about/aboutus';
+import Blog from './components/pages/about/blog';
 import Video from './components/Video';
 import Vision from './components/pages/about/vision';
 import Contact from './components/pages/contact';
@@ -40,7 +42,9 @@ function App() {
             <Footer />
           </div>
         } />
+        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/history" element={<History />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/cbse" element={<CBSE />} />
         <Route path="/classschedule" element={<ClassSchedule />} />
         <Route path="/president" element={<President />} />
