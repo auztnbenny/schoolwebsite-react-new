@@ -1,137 +1,177 @@
-.about-wrap {
-  padding: 50px 0;
-  padding-bottom: 30px; /* Added bottom padding */
+.about-wrapper {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 80px 0;
 }
 
-.aboutImg img {
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Side - Image Section */
+.about-left {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 10px;
 }
 
-.about_box {
-  padding: 0;
-  margin-left: 30px;
-  
+.experience-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
 }
 
-.about_box .title h1 {
+.years {
+  display: block;
+  color: #00ffcc;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.exp-text {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Right Side - Content Section */
+.about-right {
+  color: white;
+}
+
+.section-label {
+  color: #00ffcc;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
-.edu_list {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.learing-wrp {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.edu_icon {
-    background: #000;
-    width: 85px;
-    height: 85px;
-    line-height: 85px;
-    text-align: center;
-    border-radius: 100%;
-    margin-right: 20px;
-    display: table;
-}
-
-.edu_icon img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-.learn_info {
-  margin-left: 10px;
-}
-
-.about-wrap .title h1 {
-  font-size: 48px;
-  color: #000;
+.section-heading {
+  font-size: 2.8rem;
   font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: white;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: red;
-  font-weight: bold;
+.main-description {
+  color: #a0a0a0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-p {
-  margin-top: 10px;
-  font-family: 'Open Sans', sans-serif;
+.quote-section {
+  border-left: 4px solid #00ffcc;
+  padding-left: 20px;
+  margin: 30px 0;
 }
 
-special-education {
-    color: red;
+.quote-section p {
+  color: #a0a0a0;
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-.edu_list li:nth-child(1) .edu_icon {
-    background: #3db2d5;
+.read-more-btn {
+  background-color: #00ffcc;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.edu_list li:nth-child(2) .edu_icon {
-    background: #3ab64c;
+.read-more-btn:hover {
+  background-color: #00e6b8;
 }
 
-.edu_list li:nth-child(3) .edu_icon {
-    background: #dd1146;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-.title h1 span {
-    display: block;
-}
-
-.title h1 {
-    font-size: 48px;
-    color: #56225e;
-    margin: 0;
-    font-weight: bold;
-    text-align: left;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.h1, h1 {
-    font-size: 2.5rem;
-}
-
+/* Responsive Design */
 @media (max-width: 1200px) {
-  .about-wrap .title h1 {
-    font-size: 40px;
+  .about-container {
+    max-width: 960px;
+  }
+
+  .section-heading {
+    font-size: 2.4rem;
   }
 }
 
 @media (max-width: 992px) {
-  .about-wrap .title h1 {
-    font-size: 36px;
+  .about-container {
+    gap: 40px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .about-wrap .title h1 {
-    font-size: 32px;
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-wrapper {
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .experience-badge {
+    padding: 12px 16px;
+  }
+
+  .years {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 576px) {
-  .about-wrap .title h1 {
-    font-size: 28px;
+@media (max-width: 480px) {
+  .about-wrapper {
+    padding: 40px 0;
+  }
+
+  .about-container {
+    padding: 0 15px;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .quote-section {
+    margin: 20px 0;
   }
 }

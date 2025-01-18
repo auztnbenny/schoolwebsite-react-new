@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
+import { ChevronLeft, ChevronRight, Edit, Calendar } from 'lucide-react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
 
-
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const CustomNextArrow = (props) => {
     const { onClick } = props;
     return (
-      <div className="tp-rightarrow" onClick={onClick}>
-        <span className="tp-arr-iwrapper">&#xf105;</span>
+      <div className="slider-arrow next" onClick={onClick}>
+        <ChevronRight size={24} />
       </div>
     );
   };
@@ -20,14 +21,10 @@ const SliderComponent = () => {
   const CustomPrevArrow = (props) => {
     const { onClick } = props;
     return (
-      <div className="tp-leftarrow" onClick={onClick}>
-        <span className="tp-arr-iwrapper">&#xf104;</span>
+      <div className="slider-arrow prev" onClick={onClick}>
+        <ChevronLeft size={24} />
       </div>
     );
-  };
-
-  const handleAfterChange = (index) => {
-    setCurrentSlide(index);
   };
 
   const settings = {
@@ -37,74 +34,87 @@ const SliderComponent = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 7000,
     fade: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
-    afterChange: handleAfterChange,
+    beforeChange: () => setIsAnimating(true),
+    afterChange: (index) => {
+      setCurrentSlide(index);
+      setIsAnimating(false);
+    }
   };
 
   const sliderData = [
     {
       image: '/assets/images/slider01.png',
+      label: 'WELCOME TO',
       title: 'Education Bright Future',
-      description: 'Education illuminates the path to a brighter future, offering skills and opportunities for personal and societal growth. A quality education shapes a promising future.',
+      description: 'Education illuminates the path to a brighter future, offering skills and opportunities for personal and societal growth.',
       buttons: [
-        { text: 'Enroll Today', icon: 'fas fa-edit', link: 'https://www.arnoldschoolsalajpur.in/sample-01.html' },
-        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
-      ],
+        { text: 'Enroll Today', icon: <Edit size={18} /> },
+        { text: 'Schedule a Tour', icon: <Calendar size={18} /> }
+      ]
     },
     {
       image: '/assets/images/slider02.jpg',
-      title: "Saint Arnold's School",
-      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
+      label: 'DISCOVER',
+      title: 'Professional Education',
+      description: 'At the heart of our institution beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges.',
       buttons: [
-        { text: 'Enroll Today', icon: 'fas fa-edit', link: '#' },
-        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
-      ],
+        { text: 'Enroll Today', icon: <Edit size={18} /> },
+        { text: 'Schedule a Tour', icon: <Calendar size={18} /> }
+      ]
     },
     {
       image: '/assets/images/slider03.jpg',
+      label: 'EXPERIENCE',
       title: "Saint Arnold's School",
-      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
+      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges.',
       buttons: [
-        { text: 'Enroll Today', icon: 'fas fa-edit', link: '#' },
-        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
-      ],
+        { text: 'Enroll Today', icon: <Edit size={18} /> },
+        { text: 'Schedule a Tour', icon: <Calendar size={18} /> }
+      ]
     },
     {
       image: '/assets/images/slider04.jpg',
-      title: "Saint Arnold's School",
-      description: 'At the heart of our school beats an energy that fuels learning and growth. With confidence as our compass, we navigate challenges, embracing opportunities to excel.',
+      label: 'LEARN WITH US',
+      title: "Excellence in Education",
+      description: "Join us in creating a future where education transforms lives and builds strong foundations for tomorrow's leaders.",
       buttons: [
-        { text: 'Enroll Today', icon: 'fas fa-edit', link: '#' },
-        { text: 'Schedule a Tour', icon: 'far fa-calendar-alt', link: '#' },
-      ],
-    },
+        { text: 'Enroll Today', icon: <Edit size={18} /> },
+        { text: 'Schedule a Tour', icon: <Calendar size={18} /> }
+      ]
+    }
   ];
 
   return (
-    <div className="slider-container">
+    <div className="hero-slider">
       <Slider {...settings}>
         {sliderData.map((slide, index) => (
-          <div key={index} className="slider-item">
-            <div
-              className="slider-image"
-              style={{ backgroundImage: `url(${slide.image})` }}
+          <div key={index} className="slide-wrapper">
+            <div 
+              className="slide-content"
+              style={{ 
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})`
+              }}
             >
-              <div className="slider-content">
-                <h2 className={`animate-title ${currentSlide === index ? 'animate-in' : ''}`}>{slide.title}</h2>
-                <p className={`animate-description ${currentSlide === index ? 'animate-in' : ''}`}>{slide.description}</p>
-                <div className={`slider-buttons animate-buttons ${currentSlide === index ? 'animate-in' : ''}`}>
+              <div className="slide-text">
+                <span className={`slide-label ${currentSlide === index ? 'active' : ''} ${isAnimating ? 'animating' : ''}`}>
+                  {slide.label}
+                </span>
+                <h1 className={`slide-title ${currentSlide === index ? 'active' : ''} ${isAnimating ? 'animating' : ''}`}>
+                  {slide.title}
+                </h1>
+                <p className={`slide-description ${currentSlide === index ? 'active' : ''} ${isAnimating ? 'animating' : ''}`}>
+                  {slide.description}
+                </p>
+                <div className={`slide-buttons ${currentSlide === index ? 'active' : ''} ${isAnimating ? 'animating' : ''}`}>
                   {slide.buttons.map((button, idx) => (
-                    <a
-                      key={idx}
-                      href={button.link}
-                      className="slider-button"
-                    >
-                      <i className={button.icon}></i>
-                      {button.text}
-                    </a>
+                    <button key={idx} className="hero-button">
+                      {button.icon}
+                      <span>{button.text}</span>
+                    </button>
                   ))}
                 </div>
               </div>

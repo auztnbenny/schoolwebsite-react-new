@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import SliderComponent from './components/SliderComponent';
 import Categories from './components/Categories';
-import About from './components/About';
+// import AboutUsnew from './components/Aboutusnew';
 import Classes from './components/Classes';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
@@ -22,6 +22,11 @@ import CBSE from './components/pages/cbsedisclosure';
 import President from './components/pages/about/president';
 import Principal from './components/pages/about/principal';
 import ClassSchedule from './components/pages/academics/classschedule';
+import About from './components/About';
+import TrustedBrands from './components/TrustedBrands';
+import Services from './components/Services'; 
+import StatsCounter from './components/StatsCounter';
+import ContactInfo from './components/ContactInfo';
 
 function App() {
   return (
@@ -33,13 +38,18 @@ function App() {
             <SliderComponent />
             <Categories />
             <About />
-            <Classes />
-            <Gallery />
+            <TrustedBrands />
+            <Services />
+            <StatsCounter />
             <Testimonials />
-            <Enroll />
             <Teachers />
-            <Newsletter />
+            <Classes />
+            <ContactInfo />
             <Footer />
+            {/* <Gallery />
+            <Enroll />
+            <Newsletter /> */}
+            
           </div>
         } />
         <Route path="/aboutus" element={<Aboutus />} />

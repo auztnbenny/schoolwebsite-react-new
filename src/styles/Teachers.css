@@ -1,173 +1,179 @@
-.teacher-wrap {
-  padding: 60px 0;
+.team-section {
+  background-color: #1a1a1a;
+  padding: 80px 0;
+  color: white;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.team-header {
   text-align: center;
-  background: url('/assets/images/class-bg.jpg') no-repeat top;
-  background-size: cover;
+  margin-bottom: 60px;
 }
 
-.teacher-wrap .title {
-  margin-bottom: 50px;
+.team-label {
+  color: #00ffcc;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
 }
 
-.teacher-wrap .title:after {
-  content: '';
-  width: 54px;
-  height: 2px;
-  background: #ddb202;
-  margin-left: -26px;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-}
-
-.teacher-wrap .title h1 {
-  font-size: 48px;
-  color: #ffffff;
-  margin: 0;
+.team-title {
+  font-size: 2.8rem;
   font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.teacher-slider-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
+.team-description {
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.teacher-slider {
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  -webkit-overflow-scrolling: touch;
+/* Experts Grid */
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  padding: 20px 0;
+  margin-top: 40px;
 }
 
-.teacher-slider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+/* Expert Card Combo */
+.expert-combo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.single-teachers {
-  min-width: 300px;
-  margin: 0 15px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.teacherImg {
-  position: relative;
-  overflow: hidden;
-}
-
-.teacherImg img {
+/* Image Card */
+.expert-image-card {
   width: 100%;
-  height: auto;
-  transition: all 0.3s ease;
+  height: 300px;
+  overflow: hidden;
 }
 
-.nav-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #56225e;
+.expert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.nav-btn:hover {
-  background: #ffb607;
-  color: #fff;
-  border-color: #ffb607;
+.expert-image:hover {
+  transform: scale(1.05);
 }
 
-.nav-btn.prev {
-  position: absolute;
-  left: 0;
+/* Info Card */
+.expert-info-card {
+  background-color: #000000;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.nav-btn.next {
-  position: absolute;
-  right: 0;
-}
-.class-wrap {
-  background: url('/assets/images/class-bg.jpg') no-repeat top;
-  background-size: cover;
-  padding: 0px 0;
+.expert-name {
+  color: #00ffcc;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-@media screen and (max-width: 1200px) {
-  .teacher-wrap {
-    padding: 50px 0;
+.expert-position {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.expert-description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #00ffcc;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experts-grid {
+    gap: 20px;
   }
 
-  .teacher-wrap .title h1 {
-    font-size: 42px;
+  .team-title {
+    font-size: 2.4rem;
   }
 
-  .teacher-slider-container {
-    padding: 0 30px;
-  }
-
-  .single-teachers {
-    min-width: 280px;
+  .expert-image-card {
+    height: 250px;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .teacher-wrap {
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 0;
+  }
+
+  .experts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .expert-combo {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-image-card {
+    height: 400px;
+  }
+
+  .expert-info-card {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
     padding: 40px 0;
   }
 
-  .teacher-wrap .title h1 {
-    font-size: 36px;
+  .team-title {
+    font-size: 1.8rem;
   }
 
-  .teacher-slider-container {
-    padding: 0 20px;
+  .expert-image-card {
+    height: 300px;
   }
 
-  .single-teachers {
-    min-width: 260px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .teacher-wrap {
-    padding: 30px 0;
-  }
-
-  .teacher-wrap .title h1 {
-    font-size: 30px;
-  }
-
-  .teacher-slider-container {
-    padding: 0 10px;
-  }
-
-  .single-teachers {
-    min-width: 240px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .teacher-wrap {
-    padding: 20px 0;
-  }
-
-  .teacher-wrap .title h1 {
-    font-size: 24px;
-  }
-
-  .teacher-slider-container {
-    padding: 0 5px;
-  }
-
-  .single-teachers {
-    min-width: 220px;
+  .expert-info-card {
+    padding: 20px;
   }
 }

@@ -1,0 +1,208 @@
+.services-section {
+    background-color: #1a1a1a;
+    padding: 100px 0;
+    color: white;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  .services-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .services-label {
+    color: #00ffcc;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .services-description {
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Services Layout */
+  .services-layout {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  /* Central Icon */
+  .central-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .globe-shield {
+    width: 160px;
+    height: 160px;
+    background-color: #1a1a1a;
+    border: 2px solid #00ffcc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+  }
+  
+  .shield-check {
+    width: 100px;
+    height: 100px;
+    background-color: #00ffcc;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'%3E%3C/path%3E%3Cpolyline points='9 12 11 14 15 10'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'%3E%3C/path%3E%3Cpolyline points='9 12 11 14 15 10'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+  }
+  
+  .central-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Service Items */
+  .services-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 300px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    
+    
+  }
+  
+  .service-item {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+  }
+  
+  .service-icon svg {
+    color: #00ffcc;
+  }
+  
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .service-description {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Position Classes */
+  .top-left { justify-self: end; }
+  .top-right { justify-self: start; }
+  .middle-left { justify-self: end; }
+  .middle-right { justify-self: start; }
+  .bottom-left { justify-self: end; }
+  .bottom-right { justify-self: start; }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .services-items {
+      gap: 80px 160px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .services-items {
+      gap: 60px 120px;
+    }
+  
+    .globe-shield {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .shield-check {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 60px 0;
+    }
+  
+    .services-items {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .service-item {
+      margin: 0 auto;
+      justify-self: center !important;
+    }
+  
+    .central-icon {
+      position: relative;
+      margin: 40px auto;
+      transform: none;
+      left: auto;
+      top: auto;
+    }
+  
+    .services-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-section {
+      padding: 40px 0;
+    }
+  
+    .services-title {
+      font-size: 1.75rem;
+    }
+  
+    .globe-shield {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .shield-check {
+      width: 70px;
+      height: 70px;
+    }
+  }

@@ -1,219 +1,95 @@
-/* Categories.css - Course Categories Styles */
-.our-course-categories-two {
-  padding: 80px 0 10px;
-  
-}
-
-
-.categories-course {
-  background: #3ab64c;
-  padding: 15px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-  height: 450px; /* Set a fixed height for uniform length */
+.categories-section {
+  background: linear-gradient(to bottom, #000, #111);
+  min-height: 100vh; /* Changed to 100vh to ensure full height */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center; /* Added to center horizontally */
+  padding: 50px 20px; /* Added horizontal padding */
 }
 
-.categories-course:hover {
-  transform: translateY(-10px);
-}
-
-.cours-icon {
-  margin-bottom: 30px;
-  margin-top: -80px;
-}
-
-.cours-icon img {
-  width: 60px;
-  height: 60px;
-}
-
-.coure-icon-inner {
-    width: 130px;
-    height: 130px;
-    background: #fff;
-    text-align: center;
-    line-height: 130px;
-    border-radius: 100%;
-    display: inline-block;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-
-.unorderList {
-  list-style: none;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
-}
-
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-}
-
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-
-@media (min-width: 992px) {
-  .col-lg-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-@media (min-width: 768px) {
-  .col-md-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-  position: relative;
+.categories-container {
+  max-width: 1200px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin: 0 auto; /* Changed from just 'auto' */
 }
 
-element.style {
-  font-family: Times New Roman;
-  text-align: justify;
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  /* Removed padding-top as it's no longer needed */
 }
 
-.categories-course p {
-  font-size: 14px;
+/* Rest of the styles remain the same */
+.category-card {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 213, 0.1);
+}
+
+.category-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+  color: #00ffd5;
+  stroke-width: 1.5;
+}
+
+.category-title {
   color: #fff;
-  line-height: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
 }
 
-.categories-course h4 {
-    font-size: 24px;
-    color: #fff;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-p {
+.category-description {
+  color: #888;
   font-size: 14px;
-  line-height: 26px;
-  color: #52575e;
+  line-height: 1.6;
+  margin: 0;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+/* Glowing effect on hover */
+.category-card:hover .category-icon {
+  filter: drop-shadow(0 0 8px rgba(0, 255, 213, 0.6));
 }
 
-.categories_wrap ul li:nth-child(1) .categories-course {
-    background: #f0aa00;
-}
-
-.categories_wrap ul li:nth-child(2) .categories-course {
-    background: #ff002a;
-}
-.categories_wrap ul li:nth-child(3) .categories-course {
-  background: #003d69;
-}
-.categories_wrap ul li:nth-child(4) .categories-course {
-  background: #3db2d5;
-}
-
-.about-wrap .title h1 {
-    font-size: 48px;
-    color: #000;
-}
-
-.title h1 {
-    font-size: 48px;
-    color: #56225e;
-    margin: 0;
-    font-weight: bold;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
+/* Responsive Design */
 @media (max-width: 1200px) {
-  .categories-course {
-    height: 400px;
-  }
-}
-
-@media (max-width: 992px) {
-  .categories-course {
-    height: 350px;
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .categories-course {
-    height: 300px;
+  .categories-section {
+    padding: 40px 20px; /* Adjusted padding */
   }
-}
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-@media (max-width: 576px) {
-  .categories-course {
-    height: 250px;
+  .category-card {
+    padding: 20px;
+  }
+
+  .category-title {
+    font-size: 20px;
   }
 }

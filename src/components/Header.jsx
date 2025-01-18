@@ -1,87 +1,92 @@
-import React from 'react';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import logo from '../assets/images/logo.png';
-import '../styles/Header.css';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import '../styles/Header.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const menuItems = [
+    { title: 'HOME', path: '/' },
+    { title: 'ABOUT US', path: '/about' },
+    {
+      title: 'SERVICES',
+      path: '/services',
+      dropdown: [
+        { title: 'Service 1', path: '/service1' },
+        { title: 'Service 2', path: '/service2' },
+        { title: 'Service 3', path: '/service3' }
+      ]
+    },
+    {
+      title: 'PAGE',
+      path: '/page',
+      dropdown: [
+        { title: 'Page 1', path: '/page1' },
+        { title: 'Page 2', path: '/page2' },
+        { title: 'Page 3', path: '/page3' }
+      ]
+    },
+    {
+      title: 'BLOG',
+      path: '/blog',
+      dropdown: [
+        { title: 'Blog 1', path: '/blog1' },
+        { title: 'Blog 2', path: '/blog2' },
+        { title: 'Blog 3', path: '/blog3' }
+      ]
+    },
+    { title: 'CONTACT', path: '/contact' }
+  ];
+
   return (
-    <div className="header-wrap">
-      <Container fluid>
-        <div className="row align-items-center">
-          {/* Logo Section */}
-          <div className="col-lg-3 col-md-12 navbar-light">
-            <div className="logo">
-              <a href="index.html">
-                <img alt="Logo" className="logo-default" src={logo} />
-              </a>
-            </div>
-            <Navbar.Toggle aria-controls="navbarSupportedContent" />
+    <header className="header">
+      <nav className="nav-container">
+        <div className="nav-wrapper">
+          {/* Logo */}
+          <div className="logo-container">
+            <Link to="/">
+              <img src="/assets/images/logo.png" alt="Logo" className="logo" />
+            </Link>
           </div>
 
-          {/* Navigation Section */}
-          <div className="col-lg-6 col-md-12">
-            <Navbar expand="lg" className="navbar-light">
-              <Navbar.Toggle aria-controls="navbarSupportedContent" />
-              <Navbar.Collapse id="navbarSupportedContent">
-                <Nav className="mx-auto nav-list">
-                  <Nav.Link as={Link} to="/" className="nav-item nav-link">
-                    Home
-                  </Nav.Link>
-                  <NavDropdown title="About" id="about-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item as={Link} to="/History">History</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/Vision">Vision</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/president">President's Message</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/principal">Principal's Message</NavDropdown.Item>
-                    <NavDropdown.Item href="smc.html">SMC</NavDropdown.Item>
-                    <NavDropdown.Item href="shc.html">SHC</NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Admission" id="admission-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item href="guidelines.html">Guidelines</NavDropdown.Item>
-                    <NavDropdown.Item href="e-Admission.html">E-Admission</NavDropdown.Item>
-                    <NavDropdown.Item href="enrolments.html">Enrolments</NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Academics" id="academics-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item href="syllabus.html">Syllabus</NavDropdown.Item>
-                    <NavDropdown.Item href="rules-&-regulations.html">Rules & Regulations</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/classschedule">Class Schedule</NavDropdown.Item>
-                    <NavDropdown.Item href="exam-schedule.html">Exam Schedule</NavDropdown.Item>
-                    <NavDropdown.Item href="results.html">Results</NavDropdown.Item>
-                    <NavDropdown.Item href="school-fees.html">School Fees</NavDropdown.Item>
-                    <NavDropdown.Item href="school-uniform.html">School Uniform</NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Institution" id="institution-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item href="school-anthem.html">School Anthem</NavDropdown.Item>
-                    <NavDropdown.Item href="governing-body.html">Governing Body</NavDropdown.Item>
-                    <NavDropdown.Item href="staff.html">Staff</NavDropdown.Item>
-                    <NavDropdown.Item href="infrastructure.html">Infrastructure</NavDropdown.Item>
-                    <NavDropdown.Item href="school-bus.html">School Bus</NavDropdown.Item>
-                    <NavDropdown.Item href="activity.html">Activity</NavDropdown.Item>
-                    <NavDropdown.Item href="child-protection-policy.html">Child Protection Policy</NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Gallery" id="gallery-dropdown" className="nav-item nav-link">
-                    <NavDropdown.Item as={Link} to="/gallery">Photos</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/gallery">Videos</NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link as={Link} to="/contact" className="nav-item nav-link">
-                    Contact Us
-                  </Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
-          </div>
+          {/* Navigation Menu */}
+          <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
+            {menuItems.map((item, index) => (
+              <li key={index} className={`nav-item ${item.dropdown ? 'dropdown' : ''}`}>
+                <Link to={item.path} className="nav-link">
+                  {item.title}
+                  {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
+                </Link>
+                {item.dropdown && (
+                  <ul className="dropdown-menu">
+                    {item.dropdown.map((dropItem, dropIndex) => (
+                      <li key={dropIndex}>
+                        <Link to={dropItem.path}>{dropItem.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
 
-          {/* CBSE Disclosure Section */}
-          <div className="col-lg-3 col-md-12 text-end">
-            <div className="header_info">
-              <Link to="/cbse" className="btn-disclosure">
-                CBSE-Disclosure
-              </Link>
-            </div>
+          {/* Mobile Menu Toggle */}
+          <div className="header-buttons">
+            <button className="search-button">
+              <Search size={20} />
+            </button>
+            <button className="mobile-menu-button" onClick={toggleMenu}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
-      </Container>
-    </div>
+      </nav>
+    </header>
   );
 };
 

@@ -1,126 +1,104 @@
-// src/components/Footer.jsx
 import React from 'react';
+import { Facebook, Twitter, Instagram, Phone, Mail, MapPin } from 'lucide-react';
 import '../styles/Footer.css';
-import logo from '/assets/images/logo.png';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMapSigns, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
-function Footer() {
+const Footer = () => {
+  const pageLinks = [
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+    { name: 'Services', url: '/services' },
+    { name: 'Blog Post', url: '/blog' }
+  ];
+
+  const information = [
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Client Support', url: '/support' },
+    { name: 'Terms & Condition', url: '/terms' },
+    { name: 'Privacy Police', url: '/privacy' }
+  ];
+
+  const contactInfo = [
+    { icon: <Phone size={16} />, text: '+880171445729' },
+    { icon: <Mail size={16} />, text: 'hello@riaadarif.com' },
+    { icon: <MapPin size={16} />, text: 'Sylhet 3100, Bangladesh' }
+  ];
+
+  const socialLinks = [
+    { icon: <Facebook size={20} />, url: '#' },
+    { icon: <Twitter size={20} />, url: '#' },
+    { icon: <Instagram size={20} />, url: '#' }
+  ];
+
   return (
-    <div>
-      <div className="footer-wrap">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="footer_logo">
-                <img src={logo} alt="Footer Logo" />
-              </div>
-              <p>Saint Arnold's School: Empowering Minds, Nurturing Futures and is committed to providing quality education.</p>
-            </div>
-            <div className="col-lg-2 col-md-3 col-sm-6">
-              <h3>Quick links</h3>
-              <ul className="footer-links">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/aboutus">About</a>
-                </li>
-                <li>
-                  <a href="/blog">Blog</a>
-                </li>
-                <li>
-                  <a href="/contact">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6">
-              <h3>Office Hours</h3>
-              <ul className="hourswrp">
-                <li>
-                  Monday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Tuesday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Wednesday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Thursday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Friday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Saturday <span>07:50 - 01:30</span>
-                </li>
-                <li>
-                  Sunday <span>Closed</span>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-12">
-              <div className="footer_info">
-                <h3>Get in Touch</h3>
-                <ul className="footer-adress">
-                  <li className="footer_address">
-                    <FaMapSigns /> <span>Salajpur-Belda, P.O. Khatnagar</span>
-                  </li>
-                  <li className="footer_email">
-                    <FaEnvelope />{' '}
-                    <span>
-                      <a href="mailto:sassalajpur@gmail.com">sassalajpur@gmail.com</a>
-                    </span>
-                  </li>
-                  <li className="footer_phone">
-                    <FaPhoneAlt />{' '}
-                    <span>
-                      <a href="tel:+919547104549">+91 9547104549 / +91 9800959397 / 03229291024</a>
-                    </span>
-                  </li>
-                </ul>
-                <div className="social-icons footer_icon">
-                  <ul>
-                    <li>
-                      <a href="https://www.facebook.com/profile.php?id=100088397433758">
-                        <FaFacebookF />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FaTwitter />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FaInstagram />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/@saintarnoldschool">
-                        <FaYoutube />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+    <footer className="footer">
+      {/* Main Footer Content */}
+      <div className="footer-content">
+        <div className="footer-container">
+          {/* About Section */}
+          <div className="footer-about">
+            <p className="footer-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+              do eiusmod tempor incididunt ut labore.
+            </p>
+            <div className="social-section">
+              <h3>Social Media</h3>
+              <div className="social-links">
+                {socialLinks.map((social, index) => (
+                  <a key={index} href={social.url} className="social-link">
+                    {social.icon}
+                  </a>
+                ))}
               </div>
             </div>
+          </div>
+
+          {/* Page Links */}
+          <div className="footer-links">
+            <h3 className="footer-title">PAGE LINKS</h3>
+            <ul>
+              {pageLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.url}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Information */}
+          <div className="footer-links">
+            <h3 className="footer-title">INFORMATION</h3>
+            <ul>
+              {information.map((link, index) => (
+                <li key={index}>
+                  <a href={link.url}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="footer-contact">
+            <h3 className="footer-title">CONTACT INFO</h3>
+            <ul>
+              {contactInfo.map((info, index) => (
+                <li key={index}>
+                  <span className="contact-icon">{info.icon}</span>
+                  {info.text}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="footer-bottom text-center">
-        <div className="container">
-          <div className="copyright-text">
-            Copyright © 2025{' '}
-            <a href="https://arnoldschoolsalajpur.in/">Arnoldschoolsalajpur.in</a> &nbsp; All Rights Reserved Powered by
-            digitalweb.in
-          </div>
+      {/* Copyright Bar */}
+      <div className="copyright-bar">
+        <div className="footer-container">
+          <p>Copyright 2024 © All Right Reserved Design by Riaad Arif.</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
