@@ -93,7 +93,7 @@ const Footer = () => {
       {/* Copyright Bar */}
       <div className="copyright-bar">
         <div className="footer-container">
-          <p>Copyright 2024 © All Right Reserved Design by Riaad Arif.</p>
+          <p>Copyright 2024 © All Right Reserved </p>
         </div>
       </div>
     </footer>
