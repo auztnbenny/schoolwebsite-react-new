@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import { ChevronLeft, ChevronRight, Edit, Calendar } from 'lucide-react';
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,14 @@ import '../styles/SliderComponent.css';
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const sliderRef = useRef(null);
 
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPlay();
+    }
+  }, []);
+  
   const CustomNextArrow = (props) => {
     const { onClick } = props;
     return (
