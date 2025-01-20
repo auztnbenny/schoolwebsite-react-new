@@ -6,27 +6,27 @@ const LatestNews = () => {
   const newsItems = [
     {
       id: 1,
-      title: 'Top 5 Cybersecurity Threats In 2021',
+      title: 'Parent-Teacher Meeting (PTM)',
       image: '/assets/images/PTM.jpg',
-      date: 'July 13, 2022',
+      date: '08:30 AM - 11:00 AM',
       comments: '0',
-      excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at viverra est. Donec aliquam nibh nec mollis pharetra. Ut non...'
+      excerpt: 'Discussing students progress and well-being. Saturday, 26/10/2024'
     },
     {
       id: 2,
-      title: 'The Essentials Of Cyber Security Solutions',
+      title: 'Children Day',
       image: '/assets/images/children_day.jpg',
-      date: 'July 13, 2022',
+      date: '8.30 AM - 12:00PM  ',
       comments: '0',
-      excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at viverra est. Donec aliquam nibh nec mollis pharetra. Ut non...'
+      excerpt: 'Today\'s children shape India\'s future; how we raise them defines our nation\'s destiny." Pandit Jawaharlal Nehru November 14, 2024'
     },
     {
       id: 3,
-      title: "How To Raise Your Organization's Game To...",
+      title: "Daan Utsav",
       image: '/assets/images/DaanUtsav.jpg',
-      date: 'July 13, 2022',
+      date: '09:00 AM - 11:00 AM',
       comments: '0',
-      excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at viverra est. Donec aliquam nibh nec mollis pharetra. Ut non...'
+      excerpt: 'Daan Utsav promotes the spirit of giving, encouraging students to share resources with underprivileged communities. November 23, 2024'
     }
   ];
 

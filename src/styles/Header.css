@@ -24,7 +24,7 @@
 
 /* Logo */
 .logo-container {
-  padding-right: 40px;
+  padding-right: 350px;
 }
 
 .logo {
@@ -60,13 +60,19 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   padding: 30px 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* This ensures space between text and icon */
+  min-width: max-content; /* This prevents text wrapping */
   transition: color 0.3s ease;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+  gap: 8px; /* Space between text and icon */
+}
+
+.nav-link span {
+  white-space: nowrap; /* Prevents text wrapping */
 }
 
 .nav-link:hover {
@@ -79,7 +85,7 @@
 }
 
 .dropdown-icon {
-  margin-left: 6px;
+  margin-left: auto;
   transition: transform 0.3s ease;
 }
 

@@ -6,9 +6,9 @@ const TeachersSlider = () => {
   const experts = [
     {
       id: 1,
-      name: 'Jhon Doe',
+      name: 'SANJUKTA',
       position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI23.jpg',
+      image: '/assets/images/SANJUKTA2.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       social: {
         facebook: '#',
@@ -18,9 +18,9 @@ const TeachersSlider = () => {
     },
     {
       id: 2,
-      name: 'Jhon Doe',
+      name: 'PSUNITAPAUL',
       position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI23.jpg',
+      image: '/assets/images/PSUNITAPAUL2.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       social: {
         facebook: '#',
@@ -30,9 +30,9 @@ const TeachersSlider = () => {
     },
     {
       id: 3,
-      name: 'Jhon Doe',
+      name: 'GEETASETHI',
       position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI23.jpg',
+      image: '/assets/images/GEETASETHI2.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       social: {
         facebook: '#',
@@ -42,9 +42,9 @@ const TeachersSlider = () => {
     },
     {
       id: 4,
-      name: 'Jhon Doe',
+      name: 'GEETASETHI',
       position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI23.jpg',
+      image: '/assets/images/GEETASETHI2.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       social: {
         facebook: '#',

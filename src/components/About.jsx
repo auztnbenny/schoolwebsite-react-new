@@ -30,22 +30,18 @@ const About = () => {
 
           {/* Main Heading */}
           <h2 className="section-heading">
-            The Perfect Solution For All The Protection Question
+          About Saint Arnold’s School
           </h2>
 
           {/* Main Description */}
           <p className="main-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis mauris ac enim 
-            sagittis dignissim. Praesent egestas, urna quis auctor iaculis, lacus tortor porta ligula. 
-            Curabitur faucibus mattis tellus, eget sollicitudin nunc ultricies ut.
+          Saint Arnold’s School aims at making a unique campus that would facilitate holistic development of every child. It focuses on making the school a full-fledged School in next 5 years. In response to the new challenges in the educational environment, the management has been very creative in designing programs and activities that suit the children’s growing interest in multi-areas.
           </p>
 
           {/* Quote Section */}
           <div className="quote-section">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus 
-              cursus magna, id vehicula justo eleifend ut. Cras id ipsum magna.
-              Curabitur faucibus mattis tellus, eget sollicitudin nunc ultricies ut.
+            The new school campus presents a clean, green, friendly and healthy environment. It has well-furnished classrooms with CCTV surveillance, well-designed computer and science labs to explore and gain experiential knowledge. Since, the school is in the rural set up, it will have good sports and games facilities like football, volleyball, basketball, cricket, badminton etc., to unravel the hidden rural talents.
             </p>
           </div>
 

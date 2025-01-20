@@ -7,17 +7,17 @@ const ContactInfo = () => {
     {
       icon: <MapPin size={24} />,
       title: 'Our Location',
-      info: 'Sylhet 3100, Bangladesh'
+      info: 'Salajpur-Belda, P.O. Khatnagar'
     },
     {
       icon: <Phone size={24} />,
       title: 'Our Number',
-      info: '+880171445729'
+      info: ' +91 9547104549 / +91 9800959397 / 03229291024'
     },
     {
       icon: <Mail size={24} />,
       title: 'Our Mail',
-      info: 'hello@taadarif.com'
+      info: ' sassalajpur@gmail.com'
     }
   ];
 
@@ -35,8 +35,7 @@ const ContactInfo = () => {
             <span className="section-label">CONTACT US</span>
             <h2 className="section-title">Contact Information</h2>
             <p className="section-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis mauris ac enim 
-              sagittis dignissim. Praesent egestas, urna quis auctor iaculis, lacus tortor porta ligula.
+            Saint Arnold's School: Empowering Minds, Nurturing Futures and is committed to providing quality education.
             </p>
 
             <div className="contact-details">

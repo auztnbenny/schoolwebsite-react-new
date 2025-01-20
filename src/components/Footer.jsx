@@ -19,8 +19,8 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: <Phone size={16} />, text: '+880171445729' },
-    { icon: <Mail size={16} />, text: 'hello@riaadarif.com' },
-    { icon: <MapPin size={16} />, text: 'Sylhet 3100, Bangladesh' }
+    { icon: <Mail size={16} />, text: 'sassalajpur@gmail.com' },
+    { icon: <MapPin size={16} />, text: 'Salajpur-Belda, P.O. Khatnagar' }
   ];
 
   const socialLinks = [
@@ -37,8 +37,7 @@ const Footer = () => {
           {/* About Section */}
           <div className="footer-about">
             <p className="footer-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-              do eiusmod tempor incididunt ut labore.
+            Saint Arnold's School: Empowering Minds, Nurturing Futures and is committed to providing quality education.
             </p>
             <div className="social-section">
               <h3>Social Media</h3>

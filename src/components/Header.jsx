@@ -12,9 +12,14 @@ const Header = () => {
 
   const menuItems = [
     { title: 'HOME', path: '/' },
-    { title: 'ABOUT US', path: '/about' },
+    { title: 'ABOUT US', path: '/about' ,
+      dropdown: [
+        { title: 'Service 1', path: '/service1' },
+        { title: 'Service 2', path: '/service2' },
+        { title: 'Service 3', path: '/service3' }
+      ]},
     {
-      title: 'SERVICES',
+      title: 'ADMISSION',
       path: '/services',
       dropdown: [
         { title: 'Service 1', path: '/service1' },
@@ -23,7 +28,7 @@ const Header = () => {
       ]
     },
     {
-      title: 'PAGE',
+      title: 'ACADEMICS',
       path: '/page',
       dropdown: [
         { title: 'Page 1', path: '/page1' },
@@ -32,7 +37,7 @@ const Header = () => {
       ]
     },
     {
-      title: 'BLOG',
+      title: 'INSTITUTION',
       path: '/blog',
       dropdown: [
         { title: 'Blog 1', path: '/blog1' },
@@ -58,10 +63,10 @@ const Header = () => {
           <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
             {menuItems.map((item, index) => (
               <li key={index} className={`nav-item ${item.dropdown ? 'dropdown' : ''}`}>
-                <Link to={item.path} className="nav-link">
-                  {item.title}
-                  {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
-                </Link>
+            <Link to={item.path} className="nav-link">
+                <span>{item.title}</span>
+                {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
+              </Link>
                 {item.dropdown && (
                   <ul className="dropdown-menu">
                     {item.dropdown.map((dropItem, dropIndex) => (
@@ -77,9 +82,9 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <div className="header-buttons">
-            <button className="search-button">
+            {/* <button className="search-button">
               <Search size={20} />
-            </button>
+            </button> */}
             <button className="mobile-menu-button" onClick={toggleMenu}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

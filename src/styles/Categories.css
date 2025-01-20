@@ -1,16 +1,21 @@
 .categories-section {
   background: linear-gradient(to bottom, #000, #111);
-  min-height: 100vh; /* Changed to 100vh to ensure full height */
+  min-height: 90vh; 
   display: flex;
   align-items: center;
   justify-content: center; /* Added to center horizontally */
-  padding: 50px 20px; /* Added horizontal padding */
+  /* padding: 50px 20px;  */
+  
 }
 
 .categories-container {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto; /* Changed from just 'auto' */
+   /* Changed from just 'auto' */
+  /* margin-top: -280px; */
+ 
+  
+ 
 }
 
 .categories-grid {
@@ -60,6 +65,7 @@
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
 }
 
 /* Glowing effect on hover */
