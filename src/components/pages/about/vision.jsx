@@ -1,12 +1,11 @@
 import React from 'react';
 import './history.css';
-// Correct the import paths for Newsletter and Footer components
 import Newsletter from '../../Newsletter';
 import Footer from '../../Footer';
 
 const Vision = () => {
   return (
-    <>
+    <div className="dark-theme">
       {/* Inner Heading Start */}
       <div className="innerHeading-wrap">
         <div className="container">
@@ -21,113 +20,122 @@ const Vision = () => {
           <div className="blog_inner bloggridWrp">
             <div className="row">
               <div className="col-lg-8">
-                <div className="class_left">
-                  <div className="class_Img"><img src="/assets/images/vision.jpg" alt="" /></div>
-                  <h3>Vision</h3><br />
-                  <p><b><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#C00000' }}>Motto:</span></b><b><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#C00000' }}> </span></b><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>“Learn Lead Liberate”</span></i></b><b><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#1F4E79' }}> </span></b><b><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#0070C0' }}></span></b></p>
-                  <p className="MsoNormal3" style={{ textAlign: 'justify' }}><b><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#C00000' }}>Vision Statement:</span></b><b><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#C00000' }}> </span></b><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>“To Transform the World into a Just, Equitable and Harmonious place for Dignified Human Existence through Education.”</span></i></b><b><i><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#1F4E79' }}> </span></i></b><b><i><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman', color: '#0070C0' }}><span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b><b><i><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#0070C0' }}><span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b><b><i><span lang="EN-US" style={{ fontSize: '12pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#C00000' }}></span></i></b></p>
-                  <p className="MsoNormal3" style={{ textAlign: 'justify' }}><b><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#C00000' }}>Mission Statement: </span></b><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>“To provide holistic development to students enabling them to grow as;<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b></p>
-                  <p className="MsoListParagraphCxSpFirst" style={{ marginBottom: '0cm', marginBottom: '.0001pt', textAlign: 'justify', textIndent: '-18pt' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#C00000' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>persons of character,<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoListParagraphCxSpMiddle" style={{ marginBottom: '0cm', marginBottom: '.0001pt', textAlign: 'justify', textIndent: '-18pt' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#C00000' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>persons of right conscience<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoListParagraphCxSpMiddle" style={{ marginBottom: '0cm', marginBottom: '.0001pt', textAlign: 'justify', textIndent: '-18pt' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#C00000' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>persons of compassion<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoListParagraphCxSpLast" style={{ marginBottom: '0cm', marginBottom: '.0001pt', textAlign: 'justify', textIndent: '-18pt' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#C00000' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>persons of competence<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoNormal3" style={{ textAlign: 'justify' }}><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#1F4E79' }}>who will take their responsible place in the society as agents of change ushering in a new order that is open, inclusive, eco-friendly and sensitive to vulnerable in the society.”<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b></p>
-                  <p className="MsoNormal3" style={{ msoPagination: 'none' }}><b><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#C00000' }}>Objectives:</span></b><b><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif' }}><span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></b></p>
-                  <p className="MsoNoSpacing" style={{ marginLeft: '36pt', textAlign: 'justify', textIndent: '-18pt', lineHeight: '115%' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#002060' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#002060' }}>The objective of the institution is to impart quality and value-based education.<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoNoSpacing" style={{ marginLeft: '36pt', textAlign: 'justify', textIndent: '-18pt', lineHeight: '115%' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#002060' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#002060' }}>To form young minds with good character, promote leadership skills and prepare them to shoulder the responsibilities, maintaining a high standard of honor and probity in private and public life.<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoNoSpacing" style={{ marginLeft: '36pt', textAlign: 'justify', textIndent: '-18pt', lineHeight: '115%' }}>
-                    <span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Wingdings', color: '#002060' }}>Ø<span style={{ font: '7pt Times New Roman' }}> </span></span><b><i><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%', fontFamily: 'Times New Roman, serif', color: '#002060' }}>We seek to promote Spiritual, Moral, Intellectual, Physical and Social awareness in students which are essential factors of holistic development.<span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></i></b>
-                  </p>
-                  <p className="MsoNormal3"><span lang="EN-US" style={{ fontSize: '14pt', lineHeight: '115%' }}><span style={{ whiteSpace: 'pre' }}>&nbsp;</span></span></p>
-                  <p><span style={{ whiteSpace: 'pre' }}>&nbsp;</span></p>
-                  <p></p>
+                <div className="class_left content-section">
+                  <div className="class_Img">
+                    <img src="/assets/images/vision.jpg" alt="Vision" className="main-image" />
+                  </div>
+                  <h2 className="section-title">Vision</h2>
+                  
+                  <div className="vision-content">
+                    <div className="motto">
+                      <h3>Motto</h3>
+                      <p className="highlight-text">"Learn Lead Liberate"</p>
+                    </div>
+
+                    <div className="vision-statement">
+                      <h3>Vision Statement</h3>
+                      <p className="highlight-text">"To Transform the World into a Just, Equitable and Harmonious place for Dignified Human Existence through Education."</p>
+                    </div>
+
+                    <div className="mission-statement">
+                      <h3>Mission Statement</h3>
+                      <p>To provide holistic development to students enabling them to grow as:</p>
+                      <ul className="mission-list">
+                        <li>Persons of character</li>
+                        <li>Persons of right conscience</li>
+                        <li>Persons of compassion</li>
+                        <li>Persons of competence</li>
+                      </ul>
+                      <p>Who will take their responsible place in the society as agents of change ushering in a new order that is open, inclusive, eco-friendly and sensitive to vulnerable in the society.</p>
+                    </div>
+
+                    <div className="objectives">
+                      <h3>Objectives</h3>
+                      <ul className="objectives-list">
+                        <li>The objective of the institution is to impart quality and value-based education.</li>
+                        <li>To form young minds with good character, promote leadership skills and prepare them to shoulder the responsibilities, maintaining a high standard of honor and probity in private and public life.</li>
+                        <li>We seek to promote Spiritual, Moral, Intellectual, Physical and Social awareness in students which are essential factors of holistic development.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
+              
               <div className="col-lg-4">
-                <div className="single-widgets widget_category">
-                  <h4>Highlights</h4>
-                  <ul className="property_sec">
-                    <li className="highlight-item">
-                      <div className="highlight-img">
-                        <img src="/assets/images/gallery-1.jpg" alt="Gallery 1" /> {/* Ensure the image path is correct */}
+                <div className="sidebar-widgets">
+                  {/* Highlights Widget */}
+                  <div className="widget highlights-widget">
+                    <h3 className="widget-title">Highlights</h3>
+                    <div className="highlights-container">
+                      <div className="highlight-card">
+                        <div className="highlight-image">
+                          <img src="/assets/images/gallery-1.jpg" alt="English Classroom" />
+                        </div>
+                        <div className="highlight-content">
+                          <h4>English Classroom</h4>
+                          <p>Modern learning environment</p>
+                        </div>
                       </div>
-                      <div className="highlight-info">
-                        <h4><a href="#">English Classroom</a></h4>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+
+                      <div className="highlight-card">
+                        <div className="highlight-image">
+                          <img src="/assets/images/gallery-2.jpg" alt="School Facilities" />
+                        </div>
+                        <div className="highlight-content">
+                          <h4>School Facilities</h4>
+                          <p>Comprehensive learning spaces</p>
+                        </div>
                       </div>
-                    </li>
-                    <li className="highlight-item">
-                      <div className="highlight-img">
-                        <img src="/assets/images/gallery-2.jpg" alt="Gallery 2" /> {/* Ensure the image path is correct */}
+
+                      <div className="highlight-card">
+                        <div className="highlight-image">
+                          <img src="/assets/images/gallery-3.jpg" alt="Campus Life" />
+                        </div>
+                        <div className="highlight-content">
+                          <h4>Campus Life</h4>
+                          <p>Vibrant educational experience</p>
+                        </div>
                       </div>
-                      <div className="highlight-info">
-                        <h4><a href="#">English Classroom</a></h4>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                      </div>
-                    </li>
-                    <li className="highlight-item">
-                      <div className="highlight-img">
-                        <img src="/assets/images/gallery-3.jpg" alt="Gallery 3" /> {/* Ensure the image path is correct */}
-                      </div>
-                      <div className="highlight-info">
-                        <h4><a href="#">English Classroom</a></h4>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="single-widgets widget_category archives-widget">
-                  <h4>Archives</h4>
-                  <ul className="categories">
-                    <li><a href="#">May 2020 </a></li>
-                    <li><a href="#">February 2019 </a></li>
-                    <li><a href="#">August 2018 </a></li>
-                  </ul>
-                </div>
-                <div className="single-widgets tags-widget">
-                  <h4>Tags</h4>
-                  <ul className="tags">
-                    <li><a href="#">School</a></li>
-                    <li><a href="#">Study</a></li>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Parents</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Teachers</a></li>
-                    <li><a href="#">Art</a></li>
-                    <li><a href="#">Meetings</a></li>
-                    <li><a href="#">Design</a></li>
-                  </ul>
+                    </div>
+                  </div>
+
+                  {/* Archives Widget */}
+                  <div className="widget archives-widget">
+                    <h3 className="widget-title">Archives</h3>
+                    <ul className="archive-list">
+                      <li><a href="#">May 2020</a></li>
+                      <li><a href="#">February 2019</a></li>
+                      <li><a href="#">August 2018</a></li>
+                    </ul>
+                  </div>
+
+                  {/* Tags Widget */}
+                  <div className="widget tags-widget">
+                    <h3 className="widget-title">Tags</h3>
+                    <div className="tags-cloud">
+                      <a href="#" className="tag">School</a>
+                      <a href="#" className="tag">Study</a>
+                      <a href="#" className="tag">English</a>
+                      <a href="#" className="tag">Parents</a>
+                      <a href="#" className="tag">Sports</a>
+                      <a href="#" className="tag">News</a>
+                      <a href="#" className="tag">Teachers</a>
+                      <a href="#" className="tag">Art</a>
+                      <a href="#" className="tag">Meetings</a>
+                      <a href="#" className="tag">Design</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Inner Content End */}
 
-      {/* Newsletter Start */}
-      <Newsletter />
-      {/* Newsletter End */}
-
-      {/* Footer Start */}
+      {/* <Newsletter /> */}
       <Footer />
-      {/* Footer End */}
-    </>
+    </div>
   );
 };
 
 export default Vision;
-

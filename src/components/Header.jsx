@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import '../styles/Header.css';
 
@@ -12,11 +12,14 @@ const Header = () => {
 
   const menuItems = [
     { title: 'HOME', path: '/' },
-    { title: 'ABOUT US', path: '/about' ,
+    { title: 'ABOUT US', path: '/' ,
       dropdown: [
-        { title: 'Service 1', path: '/service1' },
-        { title: 'Service 2', path: '/service2' },
-        { title: 'Service 3', path: '/service3' }
+        { title: 'About', path: '/aboutus' },
+        { title: 'Vision', path: '/Vision' },
+        { title: 'History', path: '/history' },
+        { title: 'Principal Message', path: '/principal' },
+        { title: 'President Message', path: '/president' },
+        
       ]},
     {
       title: 'ADMISSION',
@@ -31,7 +34,7 @@ const Header = () => {
       title: 'ACADEMICS',
       path: '/page',
       dropdown: [
-        { title: 'Page 1', path: '/page1' },
+        { title: 'CLASS SCHEDULE', path: '/classschedule' },
         { title: 'Page 2', path: '/page2' },
         { title: 'Page 3', path: '/page3' }
       ]
@@ -54,24 +57,30 @@ const Header = () => {
         <div className="nav-wrapper">
           {/* Logo */}
           <div className="logo-container">
-            <Link to="/">
-              <img src="/assets/images/logo.png" alt="Logo" className="logo" />
-            </Link>
+            <NavLink to="/">
+              <img src="/assets/images/logo1.png" alt="Logo" className="logo" />
+            </NavLink>
+            <div className="school-title">
+                <h1>Saint Arnold's School</h1>
+                <h2>Salajpur</h2>
+              </div>
           </div>
 
           {/* Navigation Menu */}
           <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
             {menuItems.map((item, index) => (
               <li key={index} className={`nav-item ${item.dropdown ? 'dropdown' : ''}`}>
-            <Link to={item.path} className="nav-link">
-                <span>{item.title}</span>
-                {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
-              </Link>
+                <NavLink to={item.path} className="nav-link" activeClassName="active">
+                  <span>{item.title}</span>
+                  {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
+                </NavLink>
                 {item.dropdown && (
                   <ul className="dropdown-menu">
                     {item.dropdown.map((dropItem, dropIndex) => (
                       <li key={dropIndex}>
-                        <Link to={dropItem.path}>{dropItem.title}</Link>
+                        <NavLink to={dropItem.path} activeClassName="active">
+                          {dropItem.title}
+                        </NavLink>
                       </li>
                     ))}
                   </ul>

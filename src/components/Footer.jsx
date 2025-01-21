@@ -5,9 +5,9 @@ import '../styles/Footer.css';
 const Footer = () => {
   const pageLinks = [
     { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Services', url: '/services' },
-    { name: 'Blog Post', url: '/blog' }
+    { name: 'About', url: '/aboutus' },
+    { name: 'Contact Us', url: '/contact' },
+    { name: 'Blog ', url: '/blog' }
   ];
 
   const information = [
