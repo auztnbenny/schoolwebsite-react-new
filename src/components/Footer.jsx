@@ -81,7 +81,7 @@ const Footer = () => {
             <ul>
               {contactInfo.map((info, index) => (
                 <li key={index}>
-                  <span className="contact-icon">{info.icon}</span>
+                  <span className="contact-icone">{info.icon}</span>
                   {info.text}
                 </li>
               ))}

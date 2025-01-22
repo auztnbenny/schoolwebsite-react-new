@@ -24,29 +24,29 @@ const Header = () => {
     {
       title: 'ADMISSION',
       path: '/services',
-      dropdown: [
-        { title: 'Service 1', path: '/service1' },
-        { title: 'Service 2', path: '/service2' },
-        { title: 'Service 3', path: '/service3' }
-      ]
+      // dropdown: [
+      //   { title: 'Service 1', path: '/service1' },
+      //   { title: 'Service 2', path: '/service2' },
+      //   { title: 'Service 3', path: '/service3' }
+      // ]
     },
     {
       title: 'ACADEMICS',
       path: '/page',
       dropdown: [
         { title: 'CLASS SCHEDULE', path: '/classschedule' },
-        { title: 'Page 2', path: '/page2' },
-        { title: 'Page 3', path: '/page3' }
+        // { title: 'Page 2', path: '/page2' },
+        // { title: 'Page 3', path: '/page3' }
       ]
     },
     {
-      title: 'INSTITUTION',
-      path: '/blog',
-      dropdown: [
-        { title: 'Blog 1', path: '/blog1' },
-        { title: 'Blog 2', path: '/blog2' },
-        { title: 'Blog 3', path: '/blog3' }
-      ]
+      title: 'GALLERY',
+      path: '/gallery',
+      // dropdown: [
+      //   { title: 'Blog 1', path: '/blog1' },
+      //   { title: 'Blog 2', path: '/blog2' },
+      //   { title: 'Blog 3', path: '/blog3' }
+      // ]
     },
     { title: 'CONTACT', path: '/contact' }
   ];
