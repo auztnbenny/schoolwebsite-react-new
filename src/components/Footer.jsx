@@ -24,9 +24,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Facebook size={20} />, url: '#' },
-    { icon: <Twitter size={20} />, url: '#' },
-    { icon: <Instagram size={20} />, url: '#' }
+    { icon: <Facebook size={20} />, url: 'https://www.facebook.com/profile.php?id=100088397433758' },
+    { icon: <Twitter size={20} />, url: 'https://www.youtube.com/@saintarnoldschool' },
+    // { icon: <Instagram size={20} />, url: '#' }
   ];
 
   return (

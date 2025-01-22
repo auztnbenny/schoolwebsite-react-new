@@ -40,7 +40,7 @@ const Testimonials = () => {
           {/* <p className="section-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis mauris ac enim sagittis dignissim.
           </p> */}
-          <button className="see-more-btn">SEE MORE</button>
+          {/* <button className="see-more-btn">SEE MORE</button> */}
         </div>
 
         {/* Testimonials Grid */}

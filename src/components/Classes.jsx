@@ -38,7 +38,7 @@ const LatestNews = () => {
           <span className="section-label">BLOG & NEWS</span>
           <h2 className="section-title">Latest News</h2>
           <p className="section-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis mauris ac enim sagittis dignissim.
+          Stay informed about the latest events, activities, and milestones at Saint Arnold's School. 
           </p>
         </div>
 
@@ -65,10 +65,10 @@ const LatestNews = () => {
                     <Calendar size={16} />
                     <span>{news.date}</span>
                   </div>
-                  <div className="meta-item">
+                  {/* <div className="meta-item">
                     <MessageCircle size={16} />
                     <span>{news.comments} Comments</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <p className="news-excerpt">{news.excerpt}</p>
