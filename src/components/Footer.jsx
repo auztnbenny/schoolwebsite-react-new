@@ -7,13 +7,13 @@ const Footer = () => {
     { name: 'Home', url: '/' },
     { name: 'About', url: '/aboutus' },
     { name: 'Contact Us', url: '/contact' },
-    { name: 'Blog ', url: '/blog' }
+    // { name: 'Blog ', url: '/blog' }
   ];
 
   const information = [
-    { name: 'FAQ', url: '/faq' },
-    { name: 'Client Support', url: '/support' },
-    { name: 'Terms & Condition', url: '/terms' },
+    // { name: 'FAQ', url: '/faq' },
+    // { name: 'Client Support', url: '/support' },
+    // { name: 'Terms & Condition', url: '/terms' },
     { name: 'Privacy Police', url: '/privacy' }
   ];
 

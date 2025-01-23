@@ -38,9 +38,9 @@ function App() {
             <SliderComponent />
             <Categories />
             <About />
-            <TrustedBrands />
+            {/* <TrustedBrands /> */}
             <Services />
-            <StatsCounter />
+            {/* <StatsCounter /> */}
             <Testimonials />
             <Teachers />
             <Classes />
