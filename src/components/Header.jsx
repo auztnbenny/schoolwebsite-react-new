@@ -58,7 +58,7 @@ const Header = () => {
           {/* Logo */}
           <div className="logo-container">
             <NavLink to="/">
-              <img src="/assets/images/logo1.png" alt="Logo" className="logo" />
+              <img src="/assets/images/logo2.png" alt="Logo" className="logo" />
             </NavLink>
             <div className="school-title">
                 <h1>Saint Arnold's School</h1>
