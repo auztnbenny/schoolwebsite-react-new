@@ -35,7 +35,7 @@ const LatestNews = () => {
       <div className="news-container">
         {/* Header */}
         <div className="news-header">
-          <span className="section-label">BLOG & NEWS</span>
+          {/* <span className="section-label">BLOG & NEWS</span> */}
           <h2 className="section-title">Latest News</h2>
           <p className="section-description">
           Stay informed about the latest events, activities, and milestones at Saint Arnold's School. 
