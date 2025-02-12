@@ -53,20 +53,19 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div className="institute-info">
+        <img src="/assets/images/logo2.png" alt="St. Paul" className="saint-image" />
+        <div className="title-container">
+          <h1 className="institute-name">Saint Arnold's School Salajpur, Belda </h1>
+          <h2 className="institute-subtext">(Run By Catholic Diocese of Indore | Autonomous)</h2>
+          <h3 className="accreditation">Accredited with A Grade (1st Cycle) by NAAC</h3>
+          <h4 className="established">ESTABLISHED IN 2010</h4>
+        </div>
+        <img src="/assets/images/logo2.png" alt="Institute Logo" className="institute-logo" />
+      </div>
+      
       <nav className="nav-container">
         <div className="nav-wrapper">
-          {/* Logo */}
-          <div className="logo-container">
-            <NavLink to="/">
-              <img src="/assets/images/logo2.png" alt="Logo" className="logo" />
-            </NavLink>
-            <div className="school-title">
-                <h1>Saint Arnold's School</h1>
-                <h2>Salajpur</h2>
-              </div>
-          </div>
-
-          {/* Navigation Menu */}
           <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
             {menuItems.map((item, index) => (
               <li key={index} className={`nav-item ${item.dropdown ? 'dropdown' : ''}`}>
@@ -89,11 +88,10 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Mobile Menu Toggle */}
           <div className="header-buttons">
-            {/* <button className="search-button">
+            <button className="search-button">
               <Search size={20} />
-            </button> */}
+            </button>
             <button className="mobile-menu-button" onClick={toggleMenu}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

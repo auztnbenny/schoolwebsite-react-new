@@ -9,7 +9,7 @@ const History = () => {
       {/* Inner Heading Start */}
       <div className="innerHeading-wrap">
         <div className="container">
-          <h1>Our Journey Through Time</h1>
+          <h1>History</h1>
         </div>
       </div>
 

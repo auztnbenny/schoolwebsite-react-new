@@ -1,48 +1,76 @@
 .categories-section {
   background: linear-gradient(to bottom, #000, #111);
-  min-height: 90vh; 
+  min-height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; /* Added to center horizontally */
-  /* padding: 50px 20px;  */
-  
+  padding-top: 80px;
+}
+
+.team-headerr {
+  text-align: center;
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.team-labelr {
+  color: #00ffcc;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.team-titler {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(45deg, #fff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .categories-container {
   max-width: 1200px;
   width: 100%;
-   /* Changed from just 'auto' */
-  /* margin-top: -280px; */
- 
-  
- 
+  padding: 0 20px;
 }
 
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  /* Removed padding-top as it's no longer needed */
 }
 
-/* Rest of the styles remain the same */
 .category-card {
   background: linear-gradient(145deg, #1a1a1a, #222);
   border: 1px solid #333;
   border-radius: 8px;
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 200px;
+  overflow: hidden;
+  transition: all 0.5s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .category-card:hover {
+  height: 450px;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 255, 213, 0.1);
 }
 
+.category-content {
+  padding: 30px;
+}
+
 .category-icon-wrapper {
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .category-icon {
@@ -66,24 +94,42 @@
   line-height: 1.6;
   margin: 0;
   text-align: justify;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
 }
 
-/* Glowing effect on hover */
+.category-card:hover .category-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .category-card:hover .category-icon {
   filter: drop-shadow(0 0 8px rgba(0, 255, 213, 0.6));
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  
+  .category-card {
+    height: 180px;
+  }
+  
+  .category-card:hover {
+    height: 380px;
+  }
+  
+  .team-titler {
+    font-size: 2.4rem;
+  }
 }
 
 @media (max-width: 768px) {
   .categories-section {
-    padding: 40px 20px; /* Adjusted padding */
+    padding: 60px 20px 40px;
   }
   
   .categories-grid {
@@ -92,10 +138,26 @@
   }
 
   .category-card {
+    height: 160px;
+  }
+  
+  .category-card:hover {
+    height: 360px;
+  }
+
+  .category-content {
     padding: 20px;
   }
 
   .category-title {
     font-size: 20px;
+  }
+  
+  .team-labelr {
+    font-size: 1rem;
+  }
+  
+  .team-titler {
+    font-size: 2rem;
   }
 }

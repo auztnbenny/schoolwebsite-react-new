@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Categories.css';
 import { GraduationCap, BookOpen, Library, Users } from 'lucide-react';
 
@@ -25,16 +25,21 @@ function Categories() {
       description: "Saint Arnold's Community is a large and widely spread community. Over a period of time, the Saint Arnold's group of institutions have built up this strong community with wider networking through committed teachers, good students, and very supportive parents. The school community aims at building a larger community that makes a strong nation."
     }
   ];
+
   return (
     <div className="categories-section">
+      <div className="team-headerr">
+        <span className="team-labelr">WHY CHOOSE US</span>
+        <h2 className="team-titler">Discover Our Excellence</h2>
+      </div>
       <div className="categories-container">
         <div className="categories-grid">
           {categories.map((category, index) => (
             <div className="category-card" key={index}>
-              <div className="category-icon-wrapper">
-                {category.icon}
-              </div>
               <div className="category-content">
+                <div className="category-icon-wrapper">
+                  {category.icon}
+                </div>
                 <h3 className="category-title">{category.title}</h3>
                 <p className="category-description">{category.description}</p>
               </div>
