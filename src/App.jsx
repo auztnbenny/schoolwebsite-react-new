@@ -35,8 +35,10 @@ function App() {
       <Routes>
         <Route path="/" element={
           <div className="App">
+            <div className='wrapper'>
             <SliderComponent />
             <Categories />
+            </div>
             <About />
             {/* <TrustedBrands /> */}
             <Services />

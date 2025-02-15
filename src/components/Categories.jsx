@@ -28,10 +28,10 @@ function Categories() {
 
   return (
     <div className="categories-section">
-      <div className="team-headerr">
+      {/* <div className="team-headerr">
         <span className="team-labelr">WHY CHOOSE US</span>
         <h2 className="team-titler">Discover Our Excellence</h2>
-      </div>
+      </div> */}
       <div className="categories-container">
         <div className="categories-grid">
           {categories.map((category, index) => (

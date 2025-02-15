@@ -35,7 +35,7 @@ const SliderComponent = () => {
   };
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
