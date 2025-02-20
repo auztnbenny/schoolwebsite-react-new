@@ -4,11 +4,13 @@ import { ChevronLeft, ChevronRight, Edit, Calendar } from 'lucide-react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
+import { useNavigate } from 'react-router-dom';
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -49,6 +51,12 @@ const SliderComponent = () => {
     afterChange: (index) => {
       setCurrentSlide(index);
       setIsAnimating(false);
+    }
+  };
+
+  const handleButtonClick = (buttonText) => {
+    if (buttonText === 'Enroll Today') {
+      navigate('/application-form');
     }
   };
 
@@ -118,7 +126,11 @@ const SliderComponent = () => {
                 </p>
                 <div className={`slide-buttons ${currentSlide === index ? 'active' : ''} ${isAnimating ? 'animating' : ''}`}>
                   {slide.buttons.map((button, idx) => (
-                    <button key={idx} className="hero-button">
+                    <button 
+                      key={idx} 
+                      className="hero-button"
+                      onClick={() => handleButtonClick(button.text)}
+                    >
                       {button.icon}
                       <span>{button.text}</span>
                     </button>
