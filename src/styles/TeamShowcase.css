@@ -1,111 +1,189 @@
-.showcase-section {
+.ts-team-section {
     background-color: #000000;
     padding: 80px 0;
     color: white;
-  }
-  
-  .showcase-container {
-    max-width: 1200px;
+}
+
+.ts-team-container {
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  .showcase-header {
+}
+
+.ts-team-header {
     text-align: center;
     margin-bottom: 60px;
-  }
-  
-  .showcase-label {
+}
+
+.ts-team-label {
     color: #00ffcc;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;
-  }
-  
-  .showcase-title {
+}
+
+.ts-team-title {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #00ffcc;
+    color: white;
     margin-bottom: 20px;
-  }
-  
-  .showcase-description {
+}
+
+.ts-team-description {
     color: #a0a0a0;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
-  }
-  
-  .members-grid {
+}
+
+.ts-experts-grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .member-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .member-image-box {
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.ts-expert-combo {
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+.ts-expert-image-card {
     width: 100%;
     height: 300px;
+    margin: 0;
     overflow: hidden;
-  }
-  
-  .member-image {
+    border-radius: 8px;
+}
+
+.ts-expert-image {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
-  }
-  
-  .member-image:hover {
+}
+
+.ts-expert-image:hover {
     transform: scale(1.05);
-  }
-  
-  .member-info-box {
+}
+
+.ts-expert-info-card {
     background-color: #1a1a1a;
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .member-name {
+    text-align: center;
+}
+
+.ts-expert-name {
     color: #00ffcc;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 8px;
-  }
-  
-  .member-role {
+}
+
+.ts-expert-position {
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
-  }
-  
-  .member-bio {
+}
+
+.ts-expert-description {
     color: #a0a0a0;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 20px;
-  }
-  
-  .social-icons {
+}
+
+.ts-contact-info {
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.ts-contact-info p {
+    margin-bottom: 5px;
+}
+
+.ts-social-links {
     display: flex;
     gap: 15px;
-  }
-  
-  .social-item {
+    justify-content: center;
+}
+
+.ts-social-link {
     color: #00ffcc;
     transition: color 0.3s ease;
-  }
-  
-  .social-item:hover {
+}
+
+.ts-social-link:hover {
     color: white;
-  }
-  
+}
+
+.ts-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-color: #000000;
+    color: #00ffcc;
+}
+
+.ts-error-container {
+    background-color: #000000;
+    padding: 1rem;
+    color: #ff4444;
+}
+
+@media (min-width: 768px) {
+    .ts-expert-combo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ts-expert-info-card {
+        text-align: left;
+    }
+
+    .ts-social-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ts-experts-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ts-team-title {
+        font-size: 2rem;
+    }
+
+    .ts-expert-image {
+        height: 300px;
+    }
+
+    .ts-expert-info-card {
+        padding: 20px;
+    }
+
+    .ts-experts-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ts-team-section {
+        padding: 40px 0;
+    }
+
+    .ts-team-title {
+        font-size: 1.8rem;
+    }
+}

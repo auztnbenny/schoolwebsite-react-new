@@ -1,105 +1,144 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
 import '../styles/TeamShowcase.css';
 
 const TeamShowcase = () => {
-  const members = [
-    {
-      id: 1,
-      name: 'SANJUKTA',
-      position: 'CEO Reactive',
-      image: '/assets/images/SANJUKTA2.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#'
+  const [staffMembers, setStaffMembers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchStaffData();
+  }, []);
+
+  const fetchStaffData = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('title', 'GetStaffListERPQI');
+      formData.append('description', 'Checking');
+      formData.append('Reqdisptype', '0');
+      formData.append('ReqEmpType', '');
+      formData.append('ReqEmpDept', '');
+      formData.append('ReqEmpAccCat', '');
+      formData.append('ReqDesig', '');
+      formData.append('ReqEmpCategory', '');
+
+      const response = await fetch(
+        'http://paymentbo.sassalajpur.in/WebServiceQuickInfo.aspx',
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch staff data');
       }
-    },
-    {
-      id: 2,
-      name: 'PSUNITAPAUL',
-      position: 'CEO Reactive',
-      image: '/assets/images/PSUNITAPAUL2.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#'
-      }
-    },
-    {
-      id: 3,
-      name: 'GEETASETHI',
-      position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI2.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#'
-      }
-    },
-    {
-      id: 4,
-      name: 'GEETASETHI',
-      position: 'CEO Reactive',
-      image: '/assets/images/GEETASETHI2.jpg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#'
-      }
+
+      let data = await response.text();
+      const jsonPart = data.split('||JasonEnd')[0];
+      const staffData = JSON.parse(jsonPart);
+      console.log(staffData,'data')
+
+      const teachingStaff = staffData
+        .filter(staff => staff.EmployeeType === 'Teaching')
+        .map(staff => ({
+          id: staff.EMPAUTOID,
+          name: staff.EmployeeName,
+          position: staff.Designation,
+          department: staff.Department,
+          image: staff.PHOTOFILE === 'noPhoto.jpg' ? '/assets/images/SANJUKTA2.jpg' : staff.PHOTOFILE,
+          contactInfo: {
+            email: staff.EmailAddress || 'N/A',
+            phone: staff.PhoneNo || 'N/A',
+          },
+          description: `${staff.Designation} at ${staff.Department}`,
+          social: {
+            facebook: '#',
+            twitter: '#',
+            instagram: '#'
+          }
+        }));
+
+      setStaffMembers(teachingStaff);
+      setIsLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setIsLoading(false);
     }
-  ];
+  };
+
+  if (isLoading) {
+    return (
+      <div className="ts-loading-container">
+        Loading teaching staff data...
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="ts-error-container">
+        Error loading teaching staff data: {error}
+      </div>
+    );
+  }
 
   return (
-    <section className="showcase-section">
-      <div className="showcase-container">
+    <section className="ts-team-section">
+      <div className="ts-team-container">
         {/* Header */}
-        <div className="showcase-header">
-          {/* <span className="showcase-label">OUR TEAM</span> */}
-          <h2 className="showcase-title">Teaching Staffs</h2>
-          <p className="showcase-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis mauris ac enim sagittis dignissim.
+        <div className="ts-team-header">
+          <span className="ts-team-label">OUR TEAM</span>
+          <h2 className="ts-team-title">Meet Our Teaching Staff</h2>
+          <p className="ts-team-description">
+            Our dedicated team of educators brings expertise and passion to every classroom
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="members-grid">
-          {members.map((member) => (
-            <div key={member.id} className="member-wrapper">
-              {/* Image Card */}
-              <div className="member-image-box">
+        {/* Experts Grid */}
+        <div className="ts-experts-grid">
+          {staffMembers.map((member) => {
+            // console.log(member.image,'img')
+            return(
+            <div key={member.id} className="ts-expert-combo">
+              <div className="ts-expert-image-card">
                 <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="member-image"
+                  src={member.image}
+                  alt={member.name}
+                  className="ts-expert-image"
                 />
               </div>
-
-              {/* Info Card */}
-              <div className="member-info-box">
-                <h3 className="member-name">{member.name}</h3>
-                <p className="member-role">{member.position}</p>
-                <p className="member-bio">{member.description}</p>
+              <div className="ts-expert-info-card">
+                <h3 className="ts-expert-name">{member.name}</h3>
+                <p className="ts-expert-position">{member.position}</p>
+                {/* <p className="expert-description">{member.description}</p> */}
+                
+                {/* Contact Info */}
+                <div className="ts-contact-info">
+                  {member.contactInfo.phone !== 'N/A' && (
+                    <p>Phone: {member.contactInfo.phone}</p>
+                  )}
+                  {member.contactInfo.email !== 'N/A' && (
+                    <p>Email: {member.contactInfo.email}</p>
+                  )}
+                </div>
                 
                 {/* Social Links */}
-                <div className="social-icons">
-                  <a href={member.social.facebook} className="social-item">
-                    <Facebook size={16} />
+                {/* <div className="social-links">
+                  <a href={member.social.facebook} className="social-link">
+                    <Facebook size={20} />
                   </a>
-                  <a href={member.social.twitter} className="social-item">
-                    <Twitter size={16} />
+                  <a href={member.social.twitter} className="social-link">
+                    <Twitter size={20} />
                   </a>
-                  <a href={member.social.instagram} className="social-item">
-                    <Instagram size={16} />
+                  <a href={member.social.instagram} className="social-link">
+                    <Instagram size={20} />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </div>
     </section>
