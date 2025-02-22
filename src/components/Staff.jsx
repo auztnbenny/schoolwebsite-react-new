@@ -1,6 +1,9 @@
 import '../styles/Teachers.css';
+import { useNavigate } from 'react-router-dom';
 
 const Staffs = () => {
+  const navigate = useNavigate();
+
   const teachingExperts = [
     {
       id: 1,
@@ -38,11 +41,22 @@ const Staffs = () => {
       <div className="team-container">
         <div className="team-header">
           <span className="team-label">OUR TEAM</span>
-          <h2 className="team-title">Teaching Staffs</h2>
+          <h2 
+            className="team-title" 
+            onClick={() => navigate('/teamshowcase')}
+            style={{ cursor: 'pointer' }}
+          >
+            Teaching Staffs
+          </h2>
         </div>
         <div className="experts-grid">
           {teachingExperts.map((expert) => (
-            <div key={expert.id} className="expert-combo">
+            <div 
+              key={expert.id} 
+              className="expert-combo" 
+              onClick={() => navigate('/teamshowcase')}
+              style={{ cursor: 'pointer' }}
+            >
               <div className="expert-image-card">
                 <img src={expert.image} alt={expert.name} className="expert-image"/>
               </div>

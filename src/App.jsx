@@ -33,6 +33,7 @@ import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
 import AddTestimonial from './components/admin/AddTestimonial';
 import AddNews from './components/admin/AddNews';
+import TeamShowcase from './components/TeamShowcase';
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/add-testimonial" element={<AddTestimonial />} />
         <Route path="/admin/add-news" element={<AddNews />} />
+        <Route path="/teamshowcase" element={<TeamShowcase />} />
       </Routes>
     </>
   );
