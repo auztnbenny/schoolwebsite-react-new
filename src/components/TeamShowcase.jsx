@@ -47,16 +47,12 @@ const TeamShowcase = () => {
           name: staff.EmployeeName,
           position: staff.Designation,
           department: staff.Department,
-          image: staff.PHOTOFILE === 'noPhoto.jpg' ? '/assets/images/SANJUKTA2.jpg' : staff.PHOTOFILE,
+          image: staff.PHOTOFILE === 'http://paymentbo.sassalajpur.in/PICSPAY/01/${staff.EMPCODE}.jpg' 
+            ? '/assets/images/noPhoto.jpg'
+            : `http://paymentbo.sassalajpur.in/PICSPAY/01/${staff.EMPCODE}.jpg`,
           contactInfo: {
-            email: staff.EmailAddress || 'N/A',
-            phone: staff.PhoneNo || 'N/A',
-          },
-          description: `${staff.Designation} at ${staff.Department}`,
-          social: {
-            facebook: '#',
-            twitter: '#',
-            instagram: '#'
+            email: staff.EmailAddress || null,
+            phone: staff.PhoneNo || null,
           }
         }));
 
