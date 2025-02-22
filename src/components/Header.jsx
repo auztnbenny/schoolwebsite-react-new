@@ -38,8 +38,9 @@ const Header = () => {
       title: 'GALLERY',
       path: '/gallery',
     },
-    { title: 'CONTACT', path: '/contact' }
-  ];
+    { title: 'CONTACT', path: '/contact' },
+    { title: 'ADMIN LOGIN', path: '/admin/login' }
+,  ];
 
   return (
     <header className="header">

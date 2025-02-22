@@ -29,6 +29,10 @@ import StatsCounter from './components/StatsCounter';
 import ContactInfo from './components/ContactInfo';
 import Staffs from './components/Staff';
 import Application from './components/Application';
+import AdminLogin from './components/admin/AdminLogin';
+import AdminDashboard from './components/admin/AdminDashboard';
+import AddTestimonial from './components/admin/AddTestimonial';
+import AddNews from './components/admin/AddNews';
 
 function App() {
   return (
@@ -76,6 +80,10 @@ function App() {
         <Route path="/choice" element={<Choice />} />
         <Route path="/video" element={<Video />} />
         <Route path="/application-form" element={<Application/>} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/add-testimonial" element={<AddTestimonial />} />
+        <Route path="/admin/add-news" element={<AddNews />} />
       </Routes>
     </>
   );
