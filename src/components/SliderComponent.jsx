@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
-import { ChevronLeft, ChevronRight, Edit, Calendar } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Edit, Calendar, X } from 'lucide-react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SliderComponent.css';
@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const sliderRef = useRef(null);
   const navigate = useNavigate();
 
@@ -57,6 +58,8 @@ const SliderComponent = () => {
   const handleButtonClick = (buttonText) => {
     if (buttonText === 'Enroll Today') {
       navigate('/application-form');
+    } else if (buttonText === 'Schedule a Tour') {
+      setShowVideo(true);
     }
   };
 
@@ -141,6 +144,25 @@ const SliderComponent = () => {
           </div>
         ))}
       </Slider>
+
+      {showVideo && (
+        <div className="video-popup">
+          <div className="video-popup-content">
+            <button className="close-button" onClick={() => setShowVideo(false)}>
+              <X size={24} />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/hWRNhkfPZZ4"
+              title="School Tour"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
