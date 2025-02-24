@@ -3,9 +3,19 @@ import { Facebook, Twitter, Instagram } from 'lucide-react';
 import '../styles/TeamShowcase.css';
 
 const TeamShowcase = () => {
-  const [staffMembers, setStaffMembers] = useState([]);
+  const [staffCategories, setStaffCategories] = useState({
+    teaching: [],
+    driving: [],
+    office: [],
+    support: []
+  });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const handleImageError = (e) => {
+    e.target.src = '/assets/images/noPhoto.jpg';
+    e.target.onerror = null;
+  };
 
   useEffect(() => {
     fetchStaffData();
@@ -38,25 +48,15 @@ const TeamShowcase = () => {
       let data = await response.text();
       const jsonPart = data.split('||JasonEnd')[0];
       const staffData = JSON.parse(jsonPart);
-      console.log(staffData,'data')
 
-      const teachingStaff = staffData
-        .filter(staff => staff.EmployeeType === 'Teaching')
-        .map(staff => ({
-          id: staff.EMPAUTOID,
-          name: staff.EmployeeName,
-          position: staff.Designation,
-          department: staff.Department,
-          image: staff.PHOTOFILE === 'http://paymentbo.sassalajpur.in/PICSPAY/01/${staff.EMPCODE}.jpg' 
-            ? '/assets/images/noPhoto.jpg'
-            : `http://paymentbo.sassalajpur.in/PICSPAY/01/${staff.EMPCODE}.jpg`,
-          contactInfo: {
-            email: staff.EmailAddress || null,
-            phone: staff.PhoneNo || null,
-          }
-        }));
+      const categorizedStaff = {
+        teaching: processStaffCategory(staffData, 'Teaching'),
+        driving: processStaffCategory(staffData, 'DRIVING STAFF'),
+        office: processStaffCategory(staffData, 'OFFICE'),
+        support: processStaffCategory(staffData, 'SUPPORT STAFF')
+      };
 
-      setStaffMembers(teachingStaff);
+      setStaffCategories(categorizedStaff);
       setIsLoading(false);
     } catch (err) {
       setError(err.message);
@@ -64,53 +64,53 @@ const TeamShowcase = () => {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="ts-loading-container">
-        Loading teaching staff data...
-      </div>
-    );
-  }
+  const processStaffCategory = (staffData, categoryType) => {
+    return staffData
+      .filter(staff => staff.EmployeeType === categoryType)
+      .map(staff => {
+        const imageUrl = staff.EMPCODE 
+          ? `http://paymentbo.sassalajpur.in/PICSPAY/01/${staff.EMPCODE}.jpg`
+          : '/assets/images/noPhoto.jpg';
 
-  if (error) {
-    return (
-      <div className="ts-error-container">
-        Error loading teaching staff data: {error}
-      </div>
-    );
-  }
+        return {
+          id: staff.EMPAUTOID,
+          name: staff.EmployeeName,
+          position: staff.Designation,
+          department: staff.Department,
+          image: imageUrl,
+          contactInfo: {
+            email: staff.EmailAddress || 'N/A',
+            phone: staff.PhoneNo || 'N/A',
+          }
+        };
+      });
+  };
 
-  return (
+  const renderStaffSection = (staffMembers, title, description) => (
     <section className="ts-team-section">
       <div className="ts-team-container">
-        {/* Header */}
         <div className="ts-team-header">
           <span className="ts-team-label">OUR TEAM</span>
-          <h2 className="ts-team-title">Meet Our Teaching Staff</h2>
-          <p className="ts-team-description">
-            Our dedicated team of educators brings expertise and passion to every classroom
-          </p>
+          <h2 className="ts-team-title">{title}</h2>
+          <p className="ts-team-description">{description}</p>
         </div>
 
-        {/* Experts Grid */}
         <div className="ts-experts-grid">
-          {staffMembers.map((member) => {
-            // console.log(member.image,'img')
-            return(
+          {staffMembers.map((member) => (
             <div key={member.id} className="ts-expert-combo">
               <div className="ts-expert-image-card">
                 <img 
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name}`}
                   className="ts-expert-image"
+                  onError={handleImageError}
+                  loading="lazy"  
                 />
               </div>
               <div className="ts-expert-info-card">
                 <h3 className="ts-expert-name">{member.name}</h3>
                 <p className="ts-expert-position">{member.position}</p>
-                {/* <p className="expert-description">{member.description}</p> */}
                 
-                {/* Contact Info */}
                 <div className="ts-contact-info">
                   {member.contactInfo.phone !== 'N/A' && (
                     <p>Phone: {member.contactInfo.phone}</p>
@@ -119,25 +119,56 @@ const TeamShowcase = () => {
                     <p>Email: {member.contactInfo.email}</p>
                   )}
                 </div>
-                
-                {/* Social Links */}
-                {/* <div className="social-links">
-                  <a href={member.social.facebook} className="social-link">
-                    <Facebook size={20} />
-                  </a>
-                  <a href={member.social.twitter} className="social-link">
-                    <Twitter size={20} />
-                  </a>
-                  <a href={member.social.instagram} className="social-link">
-                    <Instagram size={20} />
-                  </a>
-                </div> */}
               </div>
             </div>
-          )})}
+          ))}
         </div>
       </div>
     </section>
+  );
+
+  if (isLoading) {
+    return (
+      <div className="ts-loading-container">
+        Loading staff data...
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="ts-error-container">
+        Error loading staff data: {error}
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {staffCategories.teaching.length > 0 && renderStaffSection(
+        staffCategories.teaching,
+        "Meet Our Teaching Staff",
+        "Our dedicated team of educators brings expertise and passion to every classroom"
+      )}
+      
+      {staffCategories.driving.length > 0 && renderStaffSection(
+        staffCategories.driving,
+        "Meet Our Driving Staff",
+        "Our skilled driving team ensures safe and reliable transportation services"
+      )}
+      
+      {staffCategories.office.length > 0 && renderStaffSection(
+        staffCategories.office,
+        "Meet Our Office Staff",
+        "Our efficient administrative team keeps operations running smoothly"
+      )}
+      
+      {staffCategories.support.length > 0 && renderStaffSection(
+        staffCategories.support,
+        "Meet Our Support Staff",
+        "Our dedicated support team provides essential services across all departments"
+      )}
+    </>
   );
 };
 
