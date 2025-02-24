@@ -27,6 +27,13 @@ import TrustedBrands from './components/TrustedBrands';
 import Services from './components/Services'; 
 import StatsCounter from './components/StatsCounter';
 import ContactInfo from './components/ContactInfo';
+import Staffs from './components/Staff';
+import Application from './components/Application';
+import AdminLogin from './components/admin/AdminLogin';
+import AdminDashboard from './components/admin/AdminDashboard';
+import AddTestimonial from './components/admin/AddTestimonial';
+import AddNews from './components/admin/AddNews';
+import TeamShowcase from './components/TeamShowcase';
 
 function App() {
   return (
@@ -35,14 +42,16 @@ function App() {
       <Routes>
         <Route path="/" element={
           <div className="App">
+            <div className='wrapper'>
             <SliderComponent />
             <Categories />
+            </div>
             <About />
             {/* <TrustedBrands /> */}
             <Services />
             {/* <StatsCounter /> */}
             <Testimonials />
-            <Teachers />
+            <Staffs />
             <Classes />
             <ContactInfo />
             <Footer />
@@ -71,6 +80,12 @@ function App() {
         <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/choice" element={<Choice />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/application-form" element={<Application/>} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/add-testimonial" element={<AddTestimonial />} />
+        <Route path="/admin/add-news" element={<AddNews />} />
+        <Route path="/teamshowcase" element={<TeamShowcase />} />
       </Routes>
     </>
   );

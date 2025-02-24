@@ -1,184 +1,135 @@
 .header {
-  background-color: #1a1a1a;
-  position: fixed;
+  background-color: rgb(255, 255, 255);
   width: 100%;
-  top: 0;
-  left: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    repeating-linear-gradient(60deg,
-      transparent,
-      transparent 20px,
-      rgba(0, 157, 255, 0.15) 20px,
-      rgba(0, 157, 255, 0.15) 21px,
-      transparent 21px,
-      transparent 40px
-    ),
-    repeating-linear-gradient(-60deg,
-      transparent,
-      transparent 20px,
-      rgba(0, 157, 255, 0.15) 20px,
-      rgba(0, 157, 255, 0.15) 21px,
-      transparent 21px,
-      transparent 40px
-    );
-  background-size: 70px 120px;
-  opacity: 0.8;
-  z-index: -2;
-}
-
-/* Glowing effect for the hexagon intersections */
-.header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at center,
-      rgba(0, 157, 255, 0.2) 0%,
-      rgba(0, 157, 255, 0.1) 30%,
-      transparent 70%
-    );
-  background-size: 70px 120px;
-  z-index: -1;
-  animation: glowPulse 3s infinite alternate;
-}
-
-@keyframes glowPulse {
-  from {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-
-/* Container styles */
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
   position: relative;
-  z-index: 1;
 }
 
-/* Keep all other existing styles... */
+/* Hexagonal background pattern */
+.hexagonal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-color: #0a1922;
+  background-image: 
+    linear-gradient(to right, rgba(10, 25, 34, 0.95), rgba(10, 25, 34, 0.85)),
+    repeating-linear-gradient(60deg, #0066cc 0, #0066cc 1px, transparent 1px, transparent 30px),
+    repeating-linear-gradient(-60deg, #0066cc 0, #0066cc 1px, transparent 1px, transparent 30px);
+  background-size: 100% 100%, 30px 50px, 30px 50px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
 
-.nav-wrapper {
+.institute-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  margin-left: -50px;
+  padding: 20px 50px;
+  position: relative;
+  background:transparent;
 }
 
-/* Logo and Title Container */
-.logo-container {
-  
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding-right: 50px;
-}
-
-.logo {
-  height: 100px;
+.saint-image {
+  padding-left: 100px;
+  height: 120px;
   width: auto;
-  display: block;
 }
 
-.school-title {
+.institute-logo {
+  padding-right: 100px;
+  height: 120px;
+  width: auto;
+}
+
+.title-container {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.institute-name {
+  font-size: 48px;
+  color: #FF1493;
+  font-family: 'Old English Text MT', serif;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.institute-subtext {
+  font-size: 24px;
+  color: #800080;
+  margin: 5px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.accreditation {
+  font-size: 20px;
+  color: #FF4500;
+  margin: 5px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.established {
+  font-size: 18px;
+  color: #FF1493;
+  margin: 5px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  padding: 20px;
+  background-color: rgba(10, 25, 34, 0.95);
+  border-top: 1px solid rgba(14, 32, 44, 0.95);
+  border-bottom: 1px solid rgba(12, 27, 36, 0.95);
+  position: relative;
+}
+
+.nav-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   justify-content: center;
 }
 
-.school-title h1 {
-  font-size: 35px;
-  color: #ffffff;
-  margin: 0;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.school-title h2 {
-  font-size: 20px;
-  color: #ffffff;
-  margin: 2px 0 0;
-  font-weight: 700;
-}
-
-/* Navigation List */
 .nav-list {
+  font-weight: 600;
+  color: #ffffff;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 10px;
+  gap: 40px;
+  justify-content: center;
 }
 
 .nav-item {
   position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 30px 15px;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
 }
 
 .nav-link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 30px 15px;
+  padding: 15px 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-width: max-content;
+  gap: 4px;
   transition: color 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  gap: 8px;
-}
-
-.nav-link span {
-  white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #00ffcc;
-}
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-icon {
-  margin-left: auto;
-  transition: transform 0.3s ease;
-}
-
-.dropdown:hover .dropdown-icon {
-  transform: rotate(180deg);
+  color: #FF1493;
 }
 
 .dropdown-menu {
@@ -186,128 +137,90 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #1a1a1a;
-  min-width: 220px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 1001;
+  backdrop-filter: blur(5px);
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu li {
-  list-style: none;
-}
-
 .dropdown-menu a {
-  color: #a0a0a0;
-  text-decoration: none;
-  padding: 12px 20px;
+  color: #333;
+  padding: 10px 15px;
   display: block;
-  font-size: 13px;
+  text-decoration: none;
+  font-size: 12px;
   transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-menu a:hover {
-  background-color: #2a2a2a;
-  color: #00ffcc;
-  padding-left: 25px;
+  background-color: rgba(245,245,245,0.9);
+  color: #FF1493;
 }
 
-/* Header Buttons */
-.header-buttons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.search-button,
-.mobile-menu-button {
+.search-button {
+  margin-left: 15px;
+  color: #ffffff;
   background: none;
   border: none;
-  color: #ffffff;
   cursor: pointer;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: color 0.3s ease;
 }
 
-.search-button:hover,
-.mobile-menu-button:hover {
-  color: #00ffcc;
+.search-button:hover {
+  color: #FF1493;
 }
 
 .mobile-menu-button {
   display: none;
+  color: #ffffff;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .mobile-menu-button {
-    display: flex;
+@media (max-width: 1200px) {
+  .institute-name {
+    font-size: 36px;
   }
+  
+  .institute-subtext {
+    font-size: 20px;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+    padding: 15px 8px;
+  }
+}
 
+@media (max-width: 992px) {
+  .institute-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
   .nav-list {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.95);
     flex-direction: column;
-    padding: 20px 0;
-    gap: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-
+  
   .nav-list.active {
     display: flex;
   }
-
-  .nav-link {
-    padding: 15px 20px;
-  }
-
+  
   .dropdown-menu {
     position: static;
-    border: none;
-    background-color: #2a2a2a;
-    display: none;
-    padding: 0;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu a {
-    padding-left: 40px;
-  }
-
-  .dropdown-menu a:hover {
-    padding-left: 45px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-wrapper {
-    height: 70px;
-  }
-
-  .logo {
-    height: 35px;
-  }
-
-  .nav-list {
-    top: 70px;
+    box-shadow: none;
   }
 }

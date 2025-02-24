@@ -1,0 +1,163 @@
+.team-section {
+  background-color: #000000;
+  padding: 80px 0;
+  color: white;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.team-category {
+  margin-bottom: 80px;
+}
+
+/* Header Styles */
+.team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.team-label {
+  color: #00ffcc;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.team-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.team-description {
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Teaching Staff Image */
+.teaching-staff-image {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.expert-image-card.full-width {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Non-Teaching Staff Grid */
+.experts-grid-full {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.expert-combo-full {
+  flex: 1;
+}
+
+/* Image Card */
+.expert-image-card {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.expert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.expert-image:hover {
+  transform: scale(1.05);
+}
+
+/* Info Card */
+.expert-info-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expert-name {
+  color: #00ffcc;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.expert-description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .team-title {
+    font-size: 2.4rem;
+  }
+
+  .expert-image-card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 0;
+  }
+
+  .experts-grid-full {
+    flex-direction: column;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .expert-image-card.full-width {
+    height: 300px;
+  }
+
+  .expert-info-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 40px 0;
+  }
+
+  .team-title {
+    font-size: 1.8rem;
+  }
+
+  .expert-image-card {
+    height: 250px;
+  }
+
+  .expert-info-card {
+    padding: 20px;
+  }
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
